@@ -1,0 +1,20 @@
+{
+  "safedrive_v3": {
+    "model_dir": "safedrive_v3",
+    "model_sha256": "77a3361d3ebba791e43f7d31fdf72d884d645988f5675de388f424898f6afb34",
+    "feature_config_sha256": "870ab60075fbe67a43fd35a03668794abff6a653a0aed20cc8c1d7bafde78adf",
+    "threshold_config_sha256": "050ad4ca855e44d38ccc9ae84a5a10e483f6452422b6b4f12942890d92e832c8",
+    "software_sha256": "3cc98c394530751f649adfe2fadd4403b7c2179bb1a31a0d51e69a96fa6f5210",
+    "app_sha256": "2e260967a41e5842e8a2eb608766e78238085dabb6d929cea02b7b20428ceb9e",
+    "frozen_at": "2026-11-21T11:42:28"
+  },
+  "safedrive_v3_stabilized": {
+    "model_dir": "safedrive_v3_stabilized",
+    "model_sha256": "206373f53b52af2bc6bee4cef7977097c2f73e144eacf3ec24c6ea734494551c",
+    "feature_config_sha256": "728b8317b5ec28c7a886bbd2209840334f470c7061a3b88866f46bd76a04b14e",
+    "threshold_config_sha256": "a4bc6e06e3417f388b99f8c7e938544df332ae085f3d1fa3ee90f5882d7aa62a",
+    "software_sha256": "3cc98c394530751f649adfe2fadd4403b7c2179bb1a31a0d51e69a96fa6f5210",
+    "app_sha256": "2e260967a41e5842e8a2eb608766e78238085dabb6d929cea02b7b20428ceb9e",
+    "frozen_at": "2026-11-21T11:42:29"
+  }
+}

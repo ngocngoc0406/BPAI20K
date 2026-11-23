@@ -1,0 +1,1013 @@
+{
+  "description": "v3.3: held-out benchmark (Nexar, 224 videos) with the DEPLOYED pipeline logic, stratified by the dataset's own verified\nmetadata (light_conditions, weather, scene) and by two MEASURED H3 proxies. Descriptive only: nothing is selected here.\n\nH3 = the fixed image-plane driving corridor (|cx - 0.5| < 0.2, cy > 0.35) used by the corridor cues / messages.\nProxies (no map / no lane data, so these are proxies, not road geometry):\n  turn proxy   median |egoh_dx| (horizontal background shift, normalised frame widths / s) over the evaluated span\n               (positives: the 5 s before the event; negatives: the whole stream). Strata = tertiles on DEV videos.\n  off-corridor positives whose largest road user in the last 2 s before the event has its centre OUTSIDE the corridor.\n\nOutput: experiments/latest/v33_benchmark_strata.json (+ per-video CSV for the failure-case gallery).\n",
+  "model": "models/safedrive_v3",
+  "n_videos": 224,
+  "turn_proxy_dev_edges": [
+    0.007408820403118929,
+    0.015766657888889313
+  ],
+  "overall": {
+    "n_pos": 112,
+    "n_neg": 112,
+    "neg_hours": 1.151,
+    "conservative": {
+      "recall": 0.089,
+      "recall_ci95": [
+        0.049,
+        0.157
+      ],
+      "hits": 10,
+      "false_alarms": 3,
+      "fa_h": 2.61,
+      "fa_h_ci95": [
+        0.54,
+        7.62
+      ],
+      "warned_ge_1s": 0.036,
+      "warned_ge_2s": 0.018,
+      "warned_ge_3s": 0.018,
+      "median_lead_s": 0.78
+    },
+    "balanced": {
+      "recall": 0.116,
+      "recall_ci95": [
+        0.069,
+        0.189
+      ],
+      "hits": 13,
+      "false_alarms": 10,
+      "fa_h": 8.69,
+      "fa_h_ci95": [
+        4.17,
+        15.98
+      ],
+      "warned_ge_1s": 0.062,
+      "warned_ge_2s": 0.027,
+      "warned_ge_3s": 0.027,
+      "median_lead_s": 1.0
+    },
+    "sensitive": {
+      "recall": 0.179,
+      "recall_ci95": [
+        0.119,
+        0.26
+      ],
+      "hits": 20,
+      "false_alarms": 19,
+      "fa_h": 16.51,
+      "fa_h_ci95": [
+        9.94,
+        25.79
+      ],
+      "warned_ge_1s": 0.116,
+      "warned_ge_2s": 0.045,
+      "warned_ge_3s": 0.036,
+      "median_lead_s": 1.07
+    }
+  },
+  "strata": {
+    "light": {
+      "Dark": {
+        "n_pos": 4,
+        "n_neg": 2,
+        "neg_hours": 0.022,
+        "conservative": {
+          "recall": 0.0,
+          "recall_ci95": [
+            0.0,
+            0.49
+          ],
+          "hits": 0,
+          "false_alarms": 0,
+          "fa_h": 0.0,
+          "fa_h_ci95": [
+            0.0,
+            171.58
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": null
+        },
+        "balanced": {
+          "recall": 0.0,
+          "recall_ci95": [
+            0.0,
+            0.49
+          ],
+          "hits": 0,
+          "false_alarms": 0,
+          "fa_h": 0.0,
+          "fa_h_ci95": [
+            0.0,
+            171.58
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": null
+        },
+        "sensitive": {
+          "recall": 0.25,
+          "recall_ci95": [
+            0.046,
+            0.699
+          ],
+          "hits": 1,
+          "false_alarms": 0,
+          "fa_h": 0.0,
+          "fa_h_ci95": [
+            0.0,
+            171.58
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 0.83
+        }
+      },
+      "Normal": {
+        "n_pos": 101,
+        "n_neg": 101,
+        "neg_hours": 1.056,
+        "conservative": {
+          "recall": 0.099,
+          "recall_ci95": [
+            0.055,
+            0.173
+          ],
+          "hits": 10,
+          "false_alarms": 3,
+          "fa_h": 2.84,
+          "fa_h_ci95": [
+            0.59,
+            8.3
+          ],
+          "warned_ge_1s": 0.04,
+          "warned_ge_2s": 0.02,
+          "warned_ge_3s": 0.02,
+          "median_lead_s": 0.78
+        },
+        "balanced": {
+          "recall": 0.129,
+          "recall_ci95": [
+            0.077,
+            0.208
+          ],
+          "hits": 13,
+          "false_alarms": 10,
+          "fa_h": 9.47,
+          "fa_h_ci95": [
+            4.54,
+            17.41
+          ],
+          "warned_ge_1s": 0.069,
+          "warned_ge_2s": 0.03,
+          "warned_ge_3s": 0.03,
+          "median_lead_s": 1.0
+        },
+        "sensitive": {
+          "recall": 0.188,
+          "recall_ci95": [
+            0.124,
+            0.275
+          ],
+          "hits": 19,
+          "false_alarms": 19,
+          "fa_h": 17.98,
+          "fa_h_ci95": [
+            10.83,
+            28.08
+          ],
+          "warned_ge_1s": 0.129,
+          "warned_ge_2s": 0.05,
+          "warned_ge_3s": 0.04,
+          "median_lead_s": 1.1
+        }
+      },
+      "Twilight": {
+        "n_pos": 7,
+        "n_neg": 9,
+        "neg_hours": 0.073,
+        "conservative": {
+          "recall": 0.0,
+          "recall_ci95": [
+            0.0,
+            0.354
+          ],
+          "hits": 0,
+          "false_alarms": 0,
+          "fa_h": 0.0,
+          "fa_h_ci95": [
+            0.0,
+            50.84
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": null
+        },
+        "balanced": {
+          "recall": 0.0,
+          "recall_ci95": [
+            0.0,
+            0.354
+          ],
+          "hits": 0,
+          "false_alarms": 0,
+          "fa_h": 0.0,
+          "fa_h_ci95": [
+            0.0,
+            50.84
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": null
+        },
+        "sensitive": {
+          "recall": 0.0,
+          "recall_ci95": [
+            0.0,
+            0.354
+          ],
+          "hits": 0,
+          "false_alarms": 0,
+          "fa_h": 0.0,
+          "fa_h_ci95": [
+            0.0,
+            50.84
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": null
+        }
+      }
+    },
+    "weather": {
+      "Clear": {
+        "n_pos": 71,
+        "n_neg": 75,
+        "neg_hours": 0.768,
+        "conservative": {
+          "recall": 0.113,
+          "recall_ci95": [
+            0.058,
+            0.207
+          ],
+          "hits": 8,
+          "false_alarms": 1,
+          "fa_h": 1.3,
+          "fa_h_ci95": [
+            0.03,
+            7.26
+          ],
+          "warned_ge_1s": 0.042,
+          "warned_ge_2s": 0.028,
+          "warned_ge_3s": 0.028,
+          "median_lead_s": 0.78
+        },
+        "balanced": {
+          "recall": 0.155,
+          "recall_ci95": [
+            0.089,
+            0.257
+          ],
+          "hits": 11,
+          "false_alarms": 5,
+          "fa_h": 6.51,
+          "fa_h_ci95": [
+            2.11,
+            15.2
+          ],
+          "warned_ge_1s": 0.085,
+          "warned_ge_2s": 0.042,
+          "warned_ge_3s": 0.042,
+          "median_lead_s": 1.0
+        },
+        "sensitive": {
+          "recall": 0.225,
+          "recall_ci95": [
+            0.144,
+            0.335
+          ],
+          "hits": 16,
+          "false_alarms": 11,
+          "fa_h": 14.33,
+          "fa_h_ci95": [
+            7.15,
+            25.64
+          ],
+          "warned_ge_1s": 0.141,
+          "warned_ge_2s": 0.056,
+          "warned_ge_3s": 0.056,
+          "median_lead_s": 1.03
+        }
+      },
+      "Cloudy": {
+        "n_pos": 30,
+        "n_neg": 34,
+        "neg_hours": 0.357,
+        "conservative": {
+          "recall": 0.033,
+          "recall_ci95": [
+            0.006,
+            0.167
+          ],
+          "hits": 1,
+          "false_alarms": 1,
+          "fa_h": 2.8,
+          "fa_h_ci95": [
+            0.07,
+            15.59
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 0.07
+        },
+        "balanced": {
+          "recall": 0.033,
+          "recall_ci95": [
+            0.006,
+            0.167
+          ],
+          "hits": 1,
+          "false_alarms": 3,
+          "fa_h": 8.4,
+          "fa_h_ci95": [
+            1.73,
+            24.54
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 0.27
+        },
+        "sensitive": {
+          "recall": 0.067,
+          "recall_ci95": [
+            0.018,
+            0.213
+          ],
+          "hits": 2,
+          "false_alarms": 6,
+          "fa_h": 16.79,
+          "fa_h_ci95": [
+            6.16,
+            36.55
+          ],
+          "warned_ge_1s": 0.033,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 1.1
+        }
+      },
+      "Rain": {
+        "n_pos": 11,
+        "n_neg": 3,
+        "neg_hours": 0.026,
+        "conservative": {
+          "recall": 0.091,
+          "recall_ci95": [
+            0.016,
+            0.377
+          ],
+          "hits": 1,
+          "false_alarms": 1,
+          "fa_h": 39.05,
+          "fa_h_ci95": [
+            0.99,
+            217.55
+          ],
+          "warned_ge_1s": 0.091,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 1.37
+        },
+        "balanced": {
+          "recall": 0.091,
+          "recall_ci95": [
+            0.016,
+            0.377
+          ],
+          "hits": 1,
+          "false_alarms": 2,
+          "fa_h": 78.09,
+          "fa_h_ci95": [
+            9.46,
+            282.09
+          ],
+          "warned_ge_1s": 0.091,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 1.37
+        },
+        "sensitive": {
+          "recall": 0.182,
+          "recall_ci95": [
+            0.051,
+            0.477
+          ],
+          "hits": 2,
+          "false_alarms": 2,
+          "fa_h": 78.09,
+          "fa_h_ci95": [
+            9.46,
+            282.09
+          ],
+          "warned_ge_1s": 0.182,
+          "warned_ge_2s": 0.091,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 1.83
+        }
+      }
+    },
+    "scene": {
+      "Highway": {
+        "n_pos": 32,
+        "n_neg": 29,
+        "neg_hours": 0.28,
+        "conservative": {
+          "recall": 0.0,
+          "recall_ci95": [
+            0.0,
+            0.107
+          ],
+          "hits": 0,
+          "false_alarms": 0,
+          "fa_h": 0.0,
+          "fa_h_ci95": [
+            0.0,
+            13.18
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": null
+        },
+        "balanced": {
+          "recall": 0.031,
+          "recall_ci95": [
+            0.006,
+            0.157
+          ],
+          "hits": 1,
+          "false_alarms": 1,
+          "fa_h": 3.57,
+          "fa_h_ci95": [
+            0.09,
+            19.9
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 0.05
+        },
+        "sensitive": {
+          "recall": 0.062,
+          "recall_ci95": [
+            0.017,
+            0.201
+          ],
+          "hits": 2,
+          "false_alarms": 1,
+          "fa_h": 3.57,
+          "fa_h_ci95": [
+            0.09,
+            19.9
+          ],
+          "warned_ge_1s": 0.031,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 0.89
+        }
+      },
+      "Industrial": {
+        "n_pos": 1,
+        "n_neg": 1,
+        "neg_hours": 0.011,
+        "conservative": {
+          "recall": 1.0,
+          "recall_ci95": [
+            0.207,
+            1.0
+          ],
+          "hits": 1,
+          "false_alarms": 0,
+          "fa_h": 0.0,
+          "fa_h_ci95": [
+            0.0,
+            336.2
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 0.8
+        },
+        "balanced": {
+          "recall": 1.0,
+          "recall_ci95": [
+            0.207,
+            1.0
+          ],
+          "hits": 1,
+          "false_alarms": 0,
+          "fa_h": 0.0,
+          "fa_h_ci95": [
+            0.0,
+            336.2
+          ],
+          "warned_ge_1s": 1.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 1.0
+        },
+        "sensitive": {
+          "recall": 1.0,
+          "recall_ci95": [
+            0.207,
+            1.0
+          ],
+          "hits": 1,
+          "false_alarms": 0,
+          "fa_h": 0.0,
+          "fa_h_ci95": [
+            0.0,
+            336.2
+          ],
+          "warned_ge_1s": 1.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 1.0
+        }
+      },
+      "Other": {
+        "n_pos": 2,
+        "n_neg": 0,
+        "neg_hours": 0.0,
+        "conservative": {
+          "recall": 0.0,
+          "recall_ci95": [
+            0.0,
+            0.658
+          ],
+          "hits": 0,
+          "false_alarms": 0,
+          "fa_h": null,
+          "fa_h_ci95": [
+            null,
+            null
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": null
+        },
+        "balanced": {
+          "recall": 0.0,
+          "recall_ci95": [
+            0.0,
+            0.658
+          ],
+          "hits": 0,
+          "false_alarms": 0,
+          "fa_h": null,
+          "fa_h_ci95": [
+            null,
+            null
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": null
+        },
+        "sensitive": {
+          "recall": 0.0,
+          "recall_ci95": [
+            0.0,
+            0.658
+          ],
+          "hits": 0,
+          "false_alarms": 0,
+          "fa_h": null,
+          "fa_h_ci95": [
+            null,
+            null
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": null
+        }
+      },
+      "Rural": {
+        "n_pos": 2,
+        "n_neg": 0,
+        "neg_hours": 0.0,
+        "conservative": {
+          "recall": 0.0,
+          "recall_ci95": [
+            0.0,
+            0.658
+          ],
+          "hits": 0,
+          "false_alarms": 0,
+          "fa_h": null,
+          "fa_h_ci95": [
+            null,
+            null
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": null
+        },
+        "balanced": {
+          "recall": 0.0,
+          "recall_ci95": [
+            0.0,
+            0.658
+          ],
+          "hits": 0,
+          "false_alarms": 0,
+          "fa_h": null,
+          "fa_h_ci95": [
+            null,
+            null
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": null
+        },
+        "sensitive": {
+          "recall": 0.0,
+          "recall_ci95": [
+            0.0,
+            0.658
+          ],
+          "hits": 0,
+          "false_alarms": 0,
+          "fa_h": null,
+          "fa_h_ci95": [
+            null,
+            null
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": null
+        }
+      },
+      "Sub-urban": {
+        "n_pos": 9,
+        "n_neg": 33,
+        "neg_hours": 0.345,
+        "conservative": {
+          "recall": 0.111,
+          "recall_ci95": [
+            0.02,
+            0.435
+          ],
+          "hits": 1,
+          "false_alarms": 0,
+          "fa_h": 0.0,
+          "fa_h_ci95": [
+            0.0,
+            10.68
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 0.42
+        },
+        "balanced": {
+          "recall": 0.111,
+          "recall_ci95": [
+            0.02,
+            0.435
+          ],
+          "hits": 1,
+          "false_alarms": 1,
+          "fa_h": 2.9,
+          "fa_h_ci95": [
+            0.07,
+            16.14
+          ],
+          "warned_ge_1s": 0.111,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 1.03
+        },
+        "sensitive": {
+          "recall": 0.111,
+          "recall_ci95": [
+            0.02,
+            0.435
+          ],
+          "hits": 1,
+          "false_alarms": 1,
+          "fa_h": 2.9,
+          "fa_h_ci95": [
+            0.07,
+            16.14
+          ],
+          "warned_ge_1s": 0.111,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 1.03
+        }
+      },
+      "Urban": {
+        "n_pos": 66,
+        "n_neg": 49,
+        "neg_hours": 0.514,
+        "conservative": {
+          "recall": 0.121,
+          "recall_ci95": [
+            0.063,
+            0.221
+          ],
+          "hits": 8,
+          "false_alarms": 3,
+          "fa_h": 5.83,
+          "fa_h_ci95": [
+            1.2,
+            17.04
+          ],
+          "warned_ge_1s": 0.061,
+          "warned_ge_2s": 0.03,
+          "warned_ge_3s": 0.03,
+          "median_lead_s": 1.07
+        },
+        "balanced": {
+          "recall": 0.152,
+          "recall_ci95": [
+            0.084,
+            0.257
+          ],
+          "hits": 10,
+          "false_alarms": 8,
+          "fa_h": 15.55,
+          "fa_h_ci95": [
+            6.71,
+            30.64
+          ],
+          "warned_ge_1s": 0.076,
+          "warned_ge_2s": 0.045,
+          "warned_ge_3s": 0.045,
+          "median_lead_s": 1.17
+        },
+        "sensitive": {
+          "recall": 0.242,
+          "recall_ci95": [
+            0.155,
+            0.358
+          ],
+          "hits": 16,
+          "false_alarms": 17,
+          "fa_h": 33.05,
+          "fa_h_ci95": [
+            19.25,
+            52.91
+          ],
+          "warned_ge_1s": 0.152,
+          "warned_ge_2s": 0.076,
+          "warned_ge_3s": 0.061,
+          "median_lead_s": 1.2
+        }
+      }
+    },
+    "turn_stratum": {
+      "high": {
+        "n_pos": 44,
+        "n_neg": 34,
+        "neg_hours": 0.328,
+        "conservative": {
+          "recall": 0.068,
+          "recall_ci95": [
+            0.023,
+            0.182
+          ],
+          "hits": 3,
+          "false_alarms": 1,
+          "fa_h": 3.05,
+          "fa_h_ci95": [
+            0.08,
+            16.97
+          ],
+          "warned_ge_1s": 0.023,
+          "warned_ge_2s": 0.023,
+          "warned_ge_3s": 0.023,
+          "median_lead_s": 0.77
+        },
+        "balanced": {
+          "recall": 0.114,
+          "recall_ci95": [
+            0.05,
+            0.24
+          ],
+          "hits": 5,
+          "false_alarms": 2,
+          "fa_h": 6.09,
+          "fa_h_ci95": [
+            0.74,
+            22.01
+          ],
+          "warned_ge_1s": 0.068,
+          "warned_ge_2s": 0.045,
+          "warned_ge_3s": 0.045,
+          "median_lead_s": 1.03
+        },
+        "sensitive": {
+          "recall": 0.182,
+          "recall_ci95": [
+            0.095,
+            0.32
+          ],
+          "hits": 8,
+          "false_alarms": 4,
+          "fa_h": 12.18,
+          "fa_h_ci95": [
+            3.32,
+            31.2
+          ],
+          "warned_ge_1s": 0.136,
+          "warned_ge_2s": 0.068,
+          "warned_ge_3s": 0.068,
+          "median_lead_s": 1.2
+        }
+      },
+      "low": {
+        "n_pos": 34,
+        "n_neg": 38,
+        "neg_hours": 0.396,
+        "conservative": {
+          "recall": 0.059,
+          "recall_ci95": [
+            0.016,
+            0.191
+          ],
+          "hits": 2,
+          "false_alarms": 0,
+          "fa_h": 0.0,
+          "fa_h_ci95": [
+            0.0,
+            9.32
+          ],
+          "warned_ge_1s": 0.0,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 0.43
+        },
+        "balanced": {
+          "recall": 0.088,
+          "recall_ci95": [
+            0.03,
+            0.23
+          ],
+          "hits": 3,
+          "false_alarms": 1,
+          "fa_h": 2.53,
+          "fa_h_ci95": [
+            0.06,
+            14.08
+          ],
+          "warned_ge_1s": 0.029,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 0.27
+        },
+        "sensitive": {
+          "recall": 0.176,
+          "recall_ci95": [
+            0.083,
+            0.335
+          ],
+          "hits": 6,
+          "false_alarms": 5,
+          "fa_h": 12.63,
+          "fa_h_ci95": [
+            4.1,
+            29.48
+          ],
+          "warned_ge_1s": 0.118,
+          "warned_ge_2s": 0.0,
+          "warned_ge_3s": 0.0,
+          "median_lead_s": 1.05
+        }
+      },
+      "mid": {
+        "n_pos": 34,
+        "n_neg": 40,
+        "neg_hours": 0.426,
+        "conservative": {
+          "recall": 0.147,
+          "recall_ci95": [
+            0.064,
+            0.301
+          ],
+          "hits": 5,
+          "false_alarms": 2,
+          "fa_h": 4.69,
+          "fa_h_ci95": [
+            0.57,
+            16.94
+          ],
+          "warned_ge_1s": 0.088,
+          "warned_ge_2s": 0.029,
+          "warned_ge_3s": 0.029,
+          "median_lead_s": 1.37
+        },
+        "balanced": {
+          "recall": 0.147,
+          "recall_ci95": [
+            0.064,
+            0.301
+          ],
+          "hits": 5,
+          "false_alarms": 7,
+          "fa_h": 16.41,
+          "fa_h_ci95": [
+            6.6,
+            33.82
+          ],
+          "warned_ge_1s": 0.088,
+          "warned_ge_2s": 0.029,
+          "warned_ge_3s": 0.029,
+          "median_lead_s": 1.37
+        },
+        "sensitive": {
+          "recall": 0.176,
+          "recall_ci95": [
+            0.083,
+            0.335
+          ],
+          "hits": 6,
+          "false_alarms": 10,
+          "fa_h": 23.45,
+          "fa_h_ci95": [
+            11.24,
+            43.12
+          ],
+          "warned_ge_1s": 0.088,
+          "warned_ge_2s": 0.059,
+          "warned_ge_3s": 0.029,
+          "median_lead_s": 1.17
+        }
+      }
+    },
+    "off_corridor_positives": {
+      "inside_corridor": {
+        "n_pos": 47,
+        "conservative": {
+          "recall": 0.128,
+          "recall_ci95": [
+            0.06,
+            0.252
+          ]
+        },
+        "balanced": {
+          "recall": 0.128,
+          "recall_ci95": [
+            0.06,
+            0.252
+          ]
+        },
+        "sensitive": {
+          "recall": 0.17,
+          "recall_ci95": [
+            0.089,
+            0.301
+          ]
+        }
+      },
+      "outside_corridor": {
+        "n_pos": 65,
+        "conservative": {
+          "recall": 0.062,
+          "recall_ci95": [
+            0.024,
+            0.148
+          ]
+        },
+        "balanced": {
+          "recall": 0.108,
+          "recall_ci95": [
+            0.053,
+            0.206
+          ]
+        },
+        "sensitive": {
+          "recall": 0.185,
+          "recall_ci95": [
+            0.109,
+            0.296
+          ]
+        }
+      }
+    }
+  }
+}

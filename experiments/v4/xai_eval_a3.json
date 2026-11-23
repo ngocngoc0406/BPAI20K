@@ -1,0 +1,656 @@
+{
+ "summary": {
+  "videos": 224,
+  "warning_events_explained": 145,
+  "wall_s": 896.5,
+  "shap_local_accuracy_max_error": 1.199040866595169e-14,
+  "attribution_stability_spearman": 0.05926308925626174,
+  "deletion_fidelity": {
+   "top10_logit_drop": 1.3192731635059067,
+   "random10_logit_drop": 0.010435006622386134,
+   "fraction_top_beats_random": 1.0
+  },
+  "graph_evidence_validity": 1.0,
+  "graph_steps_checked": 112,
+  "trace_integrity": 1.0,
+  "explanation_completeness": 0.4689655172413793,
+  "counterfactual_validity": 1.0,
+  "counterfactuals": 60,
+  "counterfactual_mean_delta": {
+   "closing speed halved": -0.026350000000000002,
+   "image TTC doubled": -0.026350000000000002,
+   "no lateral move (stays in its lane)": -0.0033
+  },
+  "counterfactual_share_lowering_risk": {
+   "closing speed halved": 0.95,
+   "image TTC doubled": 0.95,
+   "no lateral move (stays in its lane)": 0.8
+  },
+  "pipeline_latency_ms_mean": {
+   "graph": 0.6168315963060118,
+   "reasoning": 0.031501601747921305,
+   "features": 5.869298248370013,
+   "predict": 2.3826702957180834,
+   "shap": 9.308134033752806,
+   "total": 8.93410725334405
+  },
+  "pipeline_latency_total_p95_ms": 16.618460528314667,
+  "human_evaluation": "pending: needs the trained annotators (no human rating was collected)",
+  "model": "v3 (frozen) + v4 explanations (A3)",
+  "warning_levels_positive_videos_before_event": {
+   "INSUFFICIENT_EVIDENCE": 0.1569527957956536,
+   "LOW": 0.826381326641731,
+   "MODERATE": 0.0077174376213247475,
+   "HIGH": 0.008948439941290659
+  },
+  "warning_levels_normal_videos": {
+   "LOW": 0.8140767138703929,
+   "INSUFFICIENT_EVIDENCE": 0.18245334333677202,
+   "MODERATE": 0.0018287536340617088,
+   "HIGH": 0.0016411891587733284
+  },
+  "high_with_low_reliability_steps": 17
+ },
+ "counterfactual_rows": [
+  {
+   "track_id": 164,
+   "what_if": "closing speed halved",
+   "p_factual": 0.936,
+   "p_counterfactual": 0.888,
+   "delta": -0.048,
+   "valid": true,
+   "rule_changes": "{'risk_evidence': (0.471, 0.572), 'R01': (0.206, 0.266), 'R10': (0.215, 0.266)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 164,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.936,
+   "p_counterfactual": 0.888,
+   "delta": -0.048,
+   "valid": true,
+   "rule_changes": "{'risk_evidence': (0.471, 0.572), 'R01': (0.206, 0.266), 'R10': (0.215, 0.266)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 164,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.936,
+   "p_counterfactual": 0.89,
+   "delta": -0.046,
+   "valid": true,
+   "rule_changes": "{'R09': (0.9, 0.45), 'risk_evidence': (0.471, 0.447), 'R10': (0.215, 0.303)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 333,
+   "what_if": "closing speed halved",
+   "p_factual": 0.935,
+   "p_counterfactual": 0.872,
+   "delta": -0.064,
+   "valid": true,
+   "rule_changes": "{'R02': (0.173, None), 'R06': (0.216, None), 'risk_evidence': (0.351, 0.0)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 333,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.935,
+   "p_counterfactual": 0.872,
+   "delta": -0.064,
+   "valid": true,
+   "rule_changes": "{'R02': (0.173, None), 'R06': (0.216, None), 'risk_evidence': (0.351, 0.0)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 333,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.935,
+   "p_counterfactual": 0.952,
+   "delta": 0.017,
+   "valid": true,
+   "rule_changes": "{'R06': (0.216, 0.229), 'risk_evidence': (0.351, 0.37), 'R02': (0.173, 0.183)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 10,
+   "what_if": "closing speed halved",
+   "p_factual": 0.941,
+   "p_counterfactual": 0.938,
+   "delta": -0.002,
+   "valid": true,
+   "rule_changes": "{}",
+   "clipped_rows": 9
+  },
+  {
+   "track_id": 10,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.941,
+   "p_counterfactual": 0.938,
+   "delta": -0.002,
+   "valid": true,
+   "rule_changes": "{}",
+   "clipped_rows": 9
+  },
+  {
+   "track_id": 10,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.941,
+   "p_counterfactual": 0.94,
+   "delta": -0.001,
+   "valid": true,
+   "rule_changes": "{'R06': (0.026, 0.05), 'risk_evidence': (0.026, 0.05)}",
+   "clipped_rows": 3
+  },
+  {
+   "track_id": 10,
+   "what_if": "closing speed halved",
+   "p_factual": 0.914,
+   "p_counterfactual": 0.909,
+   "delta": -0.005,
+   "valid": true,
+   "rule_changes": "{'R06': (0.039, 0.04), 'risk_evidence': (0.039, 0.04)}",
+   "clipped_rows": 13
+  },
+  {
+   "track_id": 10,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.914,
+   "p_counterfactual": 0.909,
+   "delta": -0.005,
+   "valid": true,
+   "rule_changes": "{'R06': (0.039, 0.04), 'risk_evidence': (0.039, 0.04)}",
+   "clipped_rows": 13
+  },
+  {
+   "track_id": 10,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.914,
+   "p_counterfactual": 0.898,
+   "delta": -0.015,
+   "valid": true,
+   "rule_changes": "{'R06': (0.039, 0.079), 'risk_evidence': (0.039, 0.079)}",
+   "clipped_rows": 1
+  },
+  {
+   "track_id": 607,
+   "what_if": "closing speed halved",
+   "p_factual": 0.928,
+   "p_counterfactual": 0.927,
+   "delta": -0.001,
+   "valid": true,
+   "rule_changes": "{'R02': (0.321, 0.282), 'risk_evidence': (0.612, 0.59)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 607,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.928,
+   "p_counterfactual": 0.927,
+   "delta": -0.001,
+   "valid": true,
+   "rule_changes": "{'R02': (0.321, 0.282), 'risk_evidence': (0.612, 0.59)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 607,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.928,
+   "p_counterfactual": 0.927,
+   "delta": -0.001,
+   "valid": true,
+   "rule_changes": "{'R02': (0.321, 0.343), 'R03': (0.429, 0.458), 'risk_evidence': (0.612, 0.644)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 3,
+   "what_if": "closing speed halved",
+   "p_factual": 0.903,
+   "p_counterfactual": 0.842,
+   "delta": -0.061,
+   "valid": true,
+   "rule_changes": "{'R02': (0.447, None), 'R03': (0.724, None), 'risk_evidence': (0.951, 0.341), 'R05': (0.511, None)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 3,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.903,
+   "p_counterfactual": 0.842,
+   "delta": -0.061,
+   "valid": true,
+   "rule_changes": "{'R02': (0.447, None), 'R03': (0.724, None), 'risk_evidence': (0.951, 0.341), 'R05': (0.511, None)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 3,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.903,
+   "p_counterfactual": 0.901,
+   "delta": -0.001,
+   "valid": true,
+   "rule_changes": "{}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 320,
+   "what_if": "closing speed halved",
+   "p_factual": 0.983,
+   "p_counterfactual": 0.97,
+   "delta": -0.012,
+   "valid": true,
+   "rule_changes": "{'R02': (0.202, None), 'R03': (0.337, None), 'R06': (0.158, None), 'risk_evidence': (0.554, 0.0)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 320,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.983,
+   "p_counterfactual": 0.97,
+   "delta": -0.012,
+   "valid": true,
+   "rule_changes": "{'R02': (0.202, None), 'R03': (0.337, None), 'R06': (0.158, None), 'risk_evidence': (0.554, 0.0)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 320,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.983,
+   "p_counterfactual": 0.987,
+   "delta": 0.005,
+   "valid": true,
+   "rule_changes": "{'R06': (0.158, 0.254), 'risk_evidence': (0.554, 0.625), 'R02': (0.202, 0.215), 'R03': (0.337, 0.36)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 312,
+   "what_if": "closing speed halved",
+   "p_factual": 0.923,
+   "p_counterfactual": 0.918,
+   "delta": -0.005,
+   "valid": true,
+   "rule_changes": "{'R02': (0.105, None), 'risk_evidence': (0.105, 0.0)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 312,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.923,
+   "p_counterfactual": 0.918,
+   "delta": -0.005,
+   "valid": true,
+   "rule_changes": "{'R02': (0.105, None), 'risk_evidence': (0.105, 0.0)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 312,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.923,
+   "p_counterfactual": 0.922,
+   "delta": -0.001,
+   "valid": true,
+   "rule_changes": "{'R07': (None, 0.105), 'R02': (0.105, 0.186), 'risk_evidence': (0.105, 0.186)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 3,
+   "what_if": "closing speed halved",
+   "p_factual": 0.911,
+   "p_counterfactual": 0.722,
+   "delta": -0.189,
+   "valid": true,
+   "rule_changes": "{'R02': (0.441, None), 'R06': (0.556, None), 'risk_evidence': (0.752, 0.0)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 3,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.911,
+   "p_counterfactual": 0.722,
+   "delta": -0.189,
+   "valid": true,
+   "rule_changes": "{'R02': (0.441, None), 'R06': (0.556, None), 'risk_evidence': (0.752, 0.0)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 3,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.911,
+   "p_counterfactual": 0.928,
+   "delta": 0.017,
+   "valid": true,
+   "rule_changes": "{'R02': (0.441, 0.452), 'R06': (0.556, 0.569), 'risk_evidence': (0.752, 0.764)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 75,
+   "what_if": "closing speed halved",
+   "p_factual": 0.965,
+   "p_counterfactual": 0.893,
+   "delta": -0.071,
+   "valid": true,
+   "rule_changes": "{'R02': (0.356, None), 'R06': (0.55, 0.549), 'risk_evidence': (0.71, 0.549)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 75,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.965,
+   "p_counterfactual": 0.893,
+   "delta": -0.071,
+   "valid": true,
+   "rule_changes": "{'R02': (0.356, None), 'R06': (0.55, 0.549), 'risk_evidence': (0.71, 0.549)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 75,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.965,
+   "p_counterfactual": 0.943,
+   "delta": -0.021,
+   "valid": true,
+   "rule_changes": "{'R02': (0.356, 0.375), 'R06': (0.55, 0.579), 'risk_evidence': (0.71, 0.736)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 75,
+   "what_if": "closing speed halved",
+   "p_factual": 0.909,
+   "p_counterfactual": 0.949,
+   "delta": 0.04,
+   "valid": true,
+   "rule_changes": "{'R02': (0.112, None), 'R06': (0.145, None), 'risk_evidence': (0.24, 0.0)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 75,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.909,
+   "p_counterfactual": 0.949,
+   "delta": 0.04,
+   "valid": true,
+   "rule_changes": "{'R02': (0.112, None), 'R06': (0.145, None), 'risk_evidence': (0.24, 0.0)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 75,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.909,
+   "p_counterfactual": 0.94,
+   "delta": 0.031,
+   "valid": true,
+   "rule_changes": "{'R02': (0.112, 0.11), 'R06': (0.145, None), 'risk_evidence': (0.24, 0.11)}",
+   "clipped_rows": 2
+  },
+  {
+   "track_id": 310,
+   "what_if": "closing speed halved",
+   "p_factual": 0.926,
+   "p_counterfactual": 0.924,
+   "delta": -0.001,
+   "valid": true,
+   "rule_changes": "{'R02': (0.332, None), 'risk_evidence': (0.332, 0.0)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 310,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.926,
+   "p_counterfactual": 0.924,
+   "delta": -0.001,
+   "valid": true,
+   "rule_changes": "{'R02': (0.332, None), 'risk_evidence': (0.332, 0.0)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 310,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.926,
+   "p_counterfactual": 0.919,
+   "delta": -0.007,
+   "valid": true,
+   "rule_changes": "{'R02': (0.332, 0.343), 'risk_evidence': (0.332, 0.343)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 3,
+   "what_if": "closing speed halved",
+   "p_factual": 0.938,
+   "p_counterfactual": 0.903,
+   "delta": -0.035,
+   "valid": true,
+   "rule_changes": "{'R02': (0.296, None), 'risk_evidence': (0.561, 0.0), 'R05': (0.375, None)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 3,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.938,
+   "p_counterfactual": 0.903,
+   "delta": -0.035,
+   "valid": true,
+   "rule_changes": "{'R02': (0.296, None), 'risk_evidence': (0.561, 0.0), 'R05': (0.375, None)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 3,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.938,
+   "p_counterfactual": 0.936,
+   "delta": -0.002,
+   "valid": true,
+   "rule_changes": "{'R02': (0.296, 0.294), 'risk_evidence': (0.561, 0.556), 'R05': (0.375, 0.372)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 3,
+   "what_if": "closing speed halved",
+   "p_factual": 0.943,
+   "p_counterfactual": 0.916,
+   "delta": -0.027,
+   "valid": true,
+   "rule_changes": "{'R02': (0.271, None), 'R06': (0.382, None), 'risk_evidence': (0.549, 0.0)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 3,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.943,
+   "p_counterfactual": 0.916,
+   "delta": -0.027,
+   "valid": true,
+   "rule_changes": "{'R02': (0.271, None), 'R06': (0.382, None), 'risk_evidence': (0.549, 0.0)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 3,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.943,
+   "p_counterfactual": 0.939,
+   "delta": -0.003,
+   "valid": true,
+   "rule_changes": "{'R06': (0.382, 0.379), 'risk_evidence': (0.549, 0.546), 'R02': (0.271, 0.269)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 118,
+   "what_if": "closing speed halved",
+   "p_factual": 0.954,
+   "p_counterfactual": 0.953,
+   "delta": -0.001,
+   "valid": true,
+   "rule_changes": "{'risk_evidence': (0.289, 0.367), 'R10': (0.289, 0.367)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 118,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.954,
+   "p_counterfactual": 0.953,
+   "delta": -0.001,
+   "valid": true,
+   "rule_changes": "{'risk_evidence': (0.289, 0.367), 'R10': (0.289, 0.367)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 118,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.954,
+   "p_counterfactual": 0.952,
+   "delta": -0.002,
+   "valid": true,
+   "rule_changes": "{'risk_evidence': (0.289, 0.0), 'R10': (0.289, None)}",
+   "clipped_rows": 18
+  },
+  {
+   "track_id": 118,
+   "what_if": "closing speed halved",
+   "p_factual": 0.966,
+   "p_counterfactual": 0.965,
+   "delta": -0.001,
+   "valid": true,
+   "rule_changes": "{'R01': (0.453, 0.465), 'risk_evidence': (0.568, 0.578)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 118,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.966,
+   "p_counterfactual": 0.965,
+   "delta": -0.001,
+   "valid": true,
+   "rule_changes": "{'R01': (0.453, 0.465), 'risk_evidence': (0.568, 0.578)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 118,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.966,
+   "p_counterfactual": 0.964,
+   "delta": -0.002,
+   "valid": true,
+   "rule_changes": "{'R01': (0.453, None), 'risk_evidence': (0.568, 0.0), 'R10': (0.211, None)}",
+   "clipped_rows": 18
+  },
+  {
+   "track_id": 147,
+   "what_if": "closing speed halved",
+   "p_factual": 0.939,
+   "p_counterfactual": 0.935,
+   "delta": -0.003,
+   "valid": true,
+   "rule_changes": "{'R02': (0.362, None), 'risk_evidence': (0.362, 0.0)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 147,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.939,
+   "p_counterfactual": 0.935,
+   "delta": -0.003,
+   "valid": true,
+   "rule_changes": "{'R02': (0.362, None), 'risk_evidence': (0.362, 0.0)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 147,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.939,
+   "p_counterfactual": 0.923,
+   "delta": -0.015,
+   "valid": true,
+   "rule_changes": "{'R02': (0.362, 0.366), 'risk_evidence': (0.362, 0.366)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 302,
+   "what_if": "closing speed halved",
+   "p_factual": 0.928,
+   "p_counterfactual": 0.916,
+   "delta": -0.011,
+   "valid": true,
+   "rule_changes": "{}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 302,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.928,
+   "p_counterfactual": 0.916,
+   "delta": -0.011,
+   "valid": true,
+   "rule_changes": "{}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 302,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.928,
+   "p_counterfactual": 0.918,
+   "delta": -0.009,
+   "valid": true,
+   "rule_changes": "{'risk_evidence': (0.281, 0.291), 'R05': (0.281, 0.291)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 302,
+   "what_if": "closing speed halved",
+   "p_factual": 0.925,
+   "p_counterfactual": 0.917,
+   "delta": -0.009,
+   "valid": true,
+   "rule_changes": "{'R02': (0.222, None), 'risk_evidence': (0.443, 0.0), 'R05': (0.284, None)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 302,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.925,
+   "p_counterfactual": 0.917,
+   "delta": -0.009,
+   "valid": true,
+   "rule_changes": "{'R02': (0.222, None), 'risk_evidence': (0.443, 0.0), 'R05': (0.284, None)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 302,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.925,
+   "p_counterfactual": 0.923,
+   "delta": -0.003,
+   "valid": true,
+   "rule_changes": "{'R02': (0.222, 0.215), 'risk_evidence': (0.443, 0.432), 'R05': (0.284, 0.276)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 260,
+   "what_if": "closing speed halved",
+   "p_factual": 0.95,
+   "p_counterfactual": 0.929,
+   "delta": -0.021,
+   "valid": true,
+   "rule_changes": "{'risk_evidence': (0.289, 0.0), 'R05': (0.289, None)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 260,
+   "what_if": "image TTC doubled",
+   "p_factual": 0.95,
+   "p_counterfactual": 0.929,
+   "delta": -0.021,
+   "valid": true,
+   "rule_changes": "{'risk_evidence': (0.289, 0.0), 'R05': (0.289, None)}",
+   "clipped_rows": 0
+  },
+  {
+   "track_id": 260,
+   "what_if": "no lateral move (stays in its lane)",
+   "p_factual": 0.95,
+   "p_counterfactual": 0.943,
+   "delta": -0.007,
+   "valid": true,
+   "rule_changes": "{'R02': (None, 0.107), 'risk_evidence': (0.289, 0.27), 'R05': (0.289, 0.182)}",
+   "clipped_rows": 0
+  }
+ ]
+}

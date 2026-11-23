@@ -1,0 +1,6 @@
+2026-11-20 00:36:05,481 | INFO    | extract | 310/750 videos, 3.5 min elapsed, last 26.5 fps
+2026-11-20 00:38:14,917 | INFO    | extract | 320/750 videos, 5.6 min elapsed, last 29.6 fps
+2026-11-20 00:40:06,856 | INFO    | extract | 330/750 videos, 7.5 min elapsed, last 28.3 fps
+2026-11-20 00:44:26,583 | INFO    | extract | 360/750 videos, 11.8 min elapsed, last 27.3 fps
+2026-11-20 00:46:00,655 | INFO    | extract | 370/750 videos, 13.4 min elapsed, last 30.6 fps
+2026-11-20 00:46:38,318 | INFO    | extract | done: 0 failures

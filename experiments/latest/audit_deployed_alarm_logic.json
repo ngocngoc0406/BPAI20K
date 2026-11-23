@@ -1,0 +1,79 @@
+{
+  "models/safedrive_v3": {
+    "deployed_recall": 0.11607142857142858,
+    "deployed_fa_h": 8.474177259051512,
+    "prob_rule_recall": 0.11607142857142858,
+    "prob_rule_fa_h": 8.703640981420355,
+    "steps_suppressed_by_UNCERTAIN": 0,
+    "warning_thr": 0.9250482510644271,
+    "level_signal": "probability"
+  },
+  "models/safedrive_v3_stabilized": {
+    "deployed_recall": 0.07142857142857142,
+    "deployed_fa_h": 4.237088629525756,
+    "prob_rule_recall": 0.07142857142857142,
+    "prob_rule_fa_h": 4.351820490710177,
+    "steps_suppressed_by_UNCERTAIN": 0,
+    "warning_thr": 0.9462032887868742,
+    "level_signal": "probability"
+  },
+  "models/safedrive_v2_light": {
+    "deployed_recall": 0.1875,
+    "deployed_fa_h": 16.100936792197874,
+    "prob_rule_recall": 0.03571428571428571,
+    "prob_rule_fa_h": 0.8703640981420355,
+    "steps_suppressed_by_UNCERTAIN": 0,
+    "warning_thr": 0.94,
+    "level_signal": "risk_score"
+  },
+  "_ci": {
+    "models/safedrive_v3": {
+      "hits": 13,
+      "n_pos": 112,
+      "recall": 0.11607142857142858,
+      "recall_ci95": [
+        0.06909968490657367,
+        0.18850725422410133
+      ],
+      "false_alarms": 10,
+      "neg_hours": 1.1489444499545627,
+      "fa_h": 8.703640981420355,
+      "fa_h_ci95": [
+        4.173734157749817,
+        16.006305651021737
+      ]
+    },
+    "models/safedrive_v3_stabilized": {
+      "hits": 8,
+      "n_pos": 112,
+      "recall": 0.07142857142857142,
+      "recall_ci95": [
+        0.03663546303394121,
+        0.1346467015770448
+      ],
+      "false_alarms": 5,
+      "neg_hours": 1.1489444499545627,
+      "fa_h": 4.351820490710177,
+      "fa_h_ci95": [
+        1.413024267781288,
+        10.155697327041459
+      ]
+    },
+    "models/safedrive_v2_light": {
+      "hits": 21,
+      "n_pos": 112,
+      "recall": 0.1875,
+      "recall_ci95": [
+        0.12603362094830625,
+        0.2696929574138711
+      ],
+      "false_alarms": 18,
+      "neg_hours": 1.1489444499545627,
+      "fa_h": 15.666553766556639,
+      "fa_h_ci95": [
+        9.284992656365077,
+        24.759909209407823
+      ]
+    }
+  }
+}

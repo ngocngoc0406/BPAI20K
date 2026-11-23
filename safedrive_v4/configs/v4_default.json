@@ -1,0 +1,49 @@
+{
+  "config_version": "v4-default-1",
+  "fps": 10.0,
+  "scene_graph": {
+    "k_steps": 3,
+    "history_steps": 20,
+    "min_conf": 0.30,
+    "min_area": 0.002,
+    "persistence_m": 2,
+    "persistence_n": 3,
+    "corridor_half_width": 0.20,
+    "corridor_top_y": 0.35,
+    "adjacent_outer": 0.40,
+    "approach_growth_min": 0.15,
+    "away_growth_min": 0.15,
+    "cutin_lateral_min": 0.08,
+    "cutin_horizon_s": 1.5,
+    "crossing_lateral_min": 0.10,
+    "near_rel_dist": 1.5,
+    "ego_near_bottom_y": 0.85,
+    "occlusion_iou": 0.20,
+    "conflict_horizon_s": 1.5,
+    "interaction_ttr_s": 2.0,
+    "same_direction_growth_max": 0.05,
+    "ego_moving_flow_min": 0.01,
+    "enable_opposite_direction": false,
+    "tau_cap_s": 10.0,
+    "compensation": "h"
+  },
+  "reasoning": {
+    "low_tau_s": 2.5,
+    "critical_tau_s": 1.5,
+    "high_closing_growth": 0.5,
+    "min_track_steps": 3,
+    "low_detection_conf": 0.45,
+    "dark_brightness": 0.18,
+    "churn_rate_max": 0.5,
+    "ego_turn_flow_dx": 0.02
+  },
+  "warning": {
+    "moderate_quantile_fa_per_h": 20,
+    "high_quantile_fa_per_h": 10,
+    "consecutive_steps": 3,
+    "reliability_min": 0.45,
+    "mutual_info_max_quantile": 0.95
+  },
+  "windows_s": [0.5, 1.0, 2.0],
+  "default_window_s": 1.0
+}

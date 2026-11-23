@@ -1,0 +1,280 @@
+[
+ {
+  "rule_id": "R01",
+  "name": "cut-in",
+  "kind": "risk",
+  "trigger": "CUTTING_IN_FRONT_OF(obj, ego) valid",
+  "inputs": [
+   "lateral_in",
+   "gap_to_corridor",
+   "time_to_corridor_s"
+  ],
+  "scene_relations": [
+   "CUTTING_IN_FRONT_OF"
+  ],
+  "kg_relations": [
+   [
+    "Vehicle",
+    "CAN_PERFORM",
+    "CutInScenario"
+   ],
+   [
+    "LateralIntrusion",
+    "INCREASES",
+    "PotentialCollisionRisk"
+   ]
+  ],
+  "concludes": "LateralIntrusion",
+  "base_confidence": 0.8,
+  "explanation": "{subject} ({class}) moves toward the ego path at {lateral_in} frame/s; reaches the corridor in about {time_to_corridor_s} s",
+  "exceptions": [
+   "ego turning halves confidence",
+   "occluded / truncated object x0.7"
+  ]
+ },
+ {
+  "rule_id": "R02",
+  "name": "fast approach / low image TTC",
+  "kind": "risk",
+  "trigger": "APPROACHING(obj, ego) with tau < low_tau_s",
+  "inputs": [
+   "tau_s",
+   "scale_growth"
+  ],
+  "scene_relations": [
+   "APPROACHING"
+  ],
+  "kg_relations": [
+   [
+    "LowTTC",
+    "INDICATES",
+    "PotentialCollisionRisk"
+   ]
+  ],
+  "concludes": "LowTTC",
+  "base_confidence": 0.7,
+  "explanation": "{subject} grows at {scale_growth}/s in the image: image-based time-to-contact {tau_s} s",
+  "exceptions": [
+   "tau is image-based (constant closing speed assumed)",
+   "occluded / truncated object x0.7",
+   "ego turning x0.5"
+  ]
+ },
+ {
+  "rule_id": "R03",
+  "name": "low TTC with high closing speed",
+  "kind": "risk",
+  "trigger": "APPROACHING with tau < critical_tau_s and growth > high_closing_growth",
+  "inputs": [
+   "tau_s",
+   "scale_growth"
+  ],
+  "scene_relations": [
+   "APPROACHING"
+  ],
+  "kg_relations": [
+   [
+    "HighClosingSpeed",
+    "INCREASES",
+    "PotentialCollisionRisk"
+   ],
+   [
+    "LowTTC",
+    "INDICATES",
+    "PotentialCollisionRisk"
+   ]
+  ],
+  "concludes": "HighClosingSpeed",
+  "base_confidence": 0.85,
+  "explanation": "{subject}: image TTC {tau_s} s while growing at {scale_growth}/s",
+  "exceptions": [
+   "same as R02"
+  ]
+ },
+ {
+  "rule_id": "R04",
+  "name": "vulnerable road user crossing",
+  "kind": "risk",
+  "trigger": "CROSSING_PATH(pedestrian|bicycle, ego) valid",
+  "inputs": [
+   "lateral_speed",
+   "lateral_in"
+  ],
+  "scene_relations": [
+   "CROSSING_PATH"
+  ],
+  "kg_relations": [
+   [
+    "Pedestrian",
+    "CAN_PERFORM",
+    "CrossingScenario"
+   ],
+   [
+    "VulnerableRoadUserInPath",
+    "INCREASES",
+    "PotentialCollisionRisk"
+   ]
+  ],
+  "concludes": "VulnerableRoadUserInPath",
+  "base_confidence": 0.75,
+  "explanation": "{subject} ({class}) crosses the image path at {lateral_speed} frame/s",
+  "exceptions": [
+   "far road user (upper half) x0.5",
+   "occluded / truncated x0.7"
+  ]
+ },
+ {
+  "rule_id": "R05",
+  "name": "lead deceleration proxy",
+  "kind": "risk",
+  "trigger": "FOLLOWING(ego, lead) and lead growth rising > 1/s per s",
+  "inputs": [
+   "scale_growth",
+   "growth_increase_per_s"
+  ],
+  "scene_relations": [
+   "FOLLOWING"
+  ],
+  "kg_relations": [
+   [
+    "CarFollowingScenario",
+    "CAN_INVOLVE",
+    "LeadDeceleration"
+   ],
+   [
+    "LeadDeceleration",
+    "INCREASES",
+    "PotentialCollisionRisk"
+   ]
+  ],
+  "concludes": "LeadDeceleration",
+  "base_confidence": 0.6,
+  "explanation": "lead {subject}: image growth rose to {scale_growth}/s (+{growth_increase_per_s}/s per s), consistent with braking",
+  "exceptions": [
+   "no brake-light detection; growth may also come from ego acceleration"
+  ]
+ },
+ {
+  "rule_id": "R06",
+  "name": "trajectory conflict",
+  "kind": "risk",
+  "trigger": "POTENTIAL_CONFLICT(obj, ego) valid",
+  "inputs": [
+   "pred_x",
+   "pred_y",
+   "tau_s"
+  ],
+  "scene_relations": [
+   "POTENTIAL_CONFLICT"
+  ],
+  "kg_relations": [
+   [
+    "TrajectoryConflict",
+    "INDICATES",
+    "PotentialCollisionRisk"
+   ]
+  ],
+  "concludes": "TrajectoryConflict",
+  "base_confidence": 0.6,
+  "explanation": "{subject}: constant-velocity image prediction reaches the ego zone ({pred_x}, {pred_y}) within {horizon_s} s",
+  "exceptions": [
+   "constant image velocity assumed",
+   "occluded / truncated x0.7",
+   "ego turning x0.5"
+  ]
+ },
+ {
+  "rule_id": "R07",
+  "name": "occlusion near the path",
+  "kind": "reliability",
+  "trigger": "OCCLUDING(a, b) with a or b in the corridor / adjacent regions",
+  "inputs": [
+   "iou"
+  ],
+  "scene_relations": [
+   "OCCLUDING"
+  ],
+  "kg_relations": [
+   [
+    "Occlusion",
+    "REDUCES",
+    "ObservationReliability"
+   ]
+  ],
+  "concludes": "Occlusion",
+  "base_confidence": 0.6,
+  "explanation": "{subject} is partly hidden (box overlap IoU {iou}); its motion estimate is less reliable",
+  "exceptions": []
+ },
+ {
+  "rule_id": "R08",
+  "name": "perception degradation",
+  "kind": "reliability",
+  "trigger": "dark frame, low detector confidence or unstable tracks",
+  "inputs": [
+   "brightness",
+   "mean_det_conf",
+   "n_new"
+  ],
+  "scene_relations": [],
+  "kg_relations": [
+   [
+    "PerceptionDegradation",
+    "REDUCES",
+    "ObservationReliability"
+   ]
+  ],
+  "concludes": "PerceptionDegradation",
+  "base_confidence": 0.8,
+  "explanation": "perception degraded: {reasons} (brightness {brightness}, detector confidence {mean_det_conf})",
+  "exceptions": []
+ },
+ {
+  "rule_id": "R09",
+  "name": "insufficient evidence",
+  "kind": "insufficient",
+  "trigger": "corridor objects without a reliable motion estimate",
+  "inputs": [
+   "track_age",
+   "uncertainty"
+  ],
+  "scene_relations": [],
+  "kg_relations": [
+   [
+    "ObservationReliability",
+    "CONDITIONS",
+    "Warning"
+   ]
+  ],
+  "concludes": "InsufficientEvidence",
+  "base_confidence": 0.9,
+  "explanation": "{n_unresolved} of {n_corridor} objects in the path have no reliable motion estimate yet: risk cannot be concluded from them",
+  "exceptions": []
+ },
+ {
+  "rule_id": "R10",
+  "name": "interaction between road users ahead",
+  "kind": "risk",
+  "trigger": "INTERACTING_WITH(a, b) with both in the corridor / adjacent regions",
+  "inputs": [
+   "closing_rate",
+   "time_to_meet_s"
+  ],
+  "scene_relations": [
+   "INTERACTING_WITH"
+  ],
+  "kg_relations": [
+   [
+    "TrafficInteraction",
+    "INCREASES",
+    "ElevatedRisk"
+   ]
+  ],
+  "concludes": "ElevatedRisk",
+  "base_confidence": 0.4,
+  "explanation": "{subject} and another road user converge (meet in about {time_to_meet_s} s in the image)",
+  "exceptions": [
+   "weak rule (no ego involvement)"
+  ]
+ }
+]

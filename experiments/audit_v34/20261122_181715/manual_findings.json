@@ -1,0 +1,9 @@
+{
+  "3_privacy": {
+    "final_status": "NOT VERIFIED",
+    "finding": "Visual spot check by the AI assistant (NOT a human review) after the fix (whole vehicle box + 8 % padding): in the same 2 close-up rear views that failed in run 20261122_173701, the plate positions are now fully covered (review_frames/zoom_plates.jpg). Side effect: in seg0_frame00930 a very large box (probably the ego hood / dashboard detected as a car) blurs most of the frame: shared copies may be over-blurred and of limited research value (annotators use raw video).",
+    "sample_limitation": "Nexar clips are pre-anonymised by the dataset, so residual face / plate readability cannot be measured here; a human review on campaign-camera footage is still required before anything is shared."
+  },
+  "2b_os_protection": {"finding": "Get-BitLockerVolume returned 'Access denied' (needs administrator); BitLocker status unknown."},
+  "6_dataset_governance": {"limitation": "Aligned-frame perceptual hash does not detect overlapping recordings at different offsets."}
+}

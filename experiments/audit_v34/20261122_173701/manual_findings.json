@@ -1,0 +1,11 @@
+{
+  "3_privacy": {
+    "final_status": "FAIL",
+    "script_status": "NOT VERIFIED (mechanisms work; the script cannot judge readability)",
+    "finding": "Visual spot check by the AI assistant (NOT the required human review): in 2 of 2 close-up rear views (review_frames/seg2_frame00330, seg0_frame00930; zoom_plates.jpg) the licence-plate position lies ABOVE the blurred lower-45% vehicle band, so a real plate would stay readable.",
+    "sample_limitation": "Nexar clips are already anonymised by the dataset (plates and faces pixelated in the raw), so residual readability cannot be measured on this sample; campaign-camera footage with a human reviewer is required."
+  },
+  "6_dataset_governance": {
+    "limitation": "The aligned-frame perceptual hash does not detect overlapping recordings at different offsets (the two v3.3 demo sessions replay the same clip and were not flagged; both are excluded)."
+  }
+}

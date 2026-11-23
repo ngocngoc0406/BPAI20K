@@ -1,0 +1,259 @@
+{
+  "videos": [
+    "00022",
+    "00063",
+    "00099",
+    "00151",
+    "00202",
+    "00210",
+    "00256",
+    "00288",
+    "00332",
+    "00354",
+    "00360",
+    "00383",
+    "00398",
+    "00422",
+    "00458",
+    "00502",
+    "00503",
+    "00510",
+    "00517",
+    "00640"
+  ],
+  "per_video": {
+    "00022": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 22
+    },
+    "00063": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 13
+    },
+    "00099": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 121
+    },
+    "00151": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 13
+    },
+    "00202": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 73
+    },
+    "00210": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 22
+    },
+    "00256": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 2
+    },
+    "00288": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 1
+    },
+    "00332": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 0
+    },
+    "00354": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 21
+    },
+    "00360": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 65
+    },
+    "00383": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 0
+    },
+    "00398": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 10
+    },
+    "00422": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 5
+    },
+    "00458": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 0
+    },
+    "00502": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 47
+    },
+    "00503": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 35
+    },
+    "00510": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 120
+    },
+    "00517": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 8
+    },
+    "00640": {
+      "motion": true,
+      "diff": true,
+      "ego": true,
+      "track_boxes_ids_conf": true,
+      "track_class_groups": true,
+      "p_mean": true,
+      "alarms": true,
+      "fine_labels_changed_rows": 69
+    }
+  },
+  "all_inputs_identical": true,
+  "flips_before_cache": {
+    "tracks": 1340,
+    "tracks_with_class_change": 163,
+    "changes_within_group": 578,
+    "changes_across_groups": 46,
+    "pairs": {
+      "car/truck": 429,
+      "bus/truck": 100,
+      "bus/car": 44,
+      "car/person": 38,
+      "car/motorcycle": 6,
+      "bicycle/motorcycle": 5,
+      "bicycle/car": 1,
+      "motorcycle/truck": 1
+    }
+  },
+  "flips_after_stabilizer": {
+    "tracks": 1340,
+    "tracks_with_class_change": 74,
+    "changes_within_group": 82,
+    "changes_across_groups": 46,
+    "pairs": {
+      "car/truck": 60,
+      "car/person": 38,
+      "bus/car": 11,
+      "bus/truck": 10,
+      "car/motorcycle": 6,
+      "bicycle/motorcycle": 1,
+      "bicycle/car": 1,
+      "motorcycle/truck": 1
+    }
+  }
+}

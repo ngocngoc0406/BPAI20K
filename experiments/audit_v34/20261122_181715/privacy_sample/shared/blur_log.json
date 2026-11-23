@@ -1,0 +1,25 @@
+{
+  "created": "2026-11-22T18:17:26",
+  "method": "(no dedicated face or licence-plate detector is available in this project, so blurring is conservative and\nregion-based on the COCO detector, run at a LOW confidence threshold, with boxes kept for +-2 frames to bridge detector flicker):\n  person                      whole box blurred (covers faces)\n  bicycle / motorcycle        whole box blurred (riders, small plates)\n  car / bus / truck           whole box blurred (v3.4 audit fix: a lower 45 % band missed rear plates mounted at mid-height)\n  every box                   enlarged by BOX_PAD of its width / height on each side (detector boxes are not tight)\nThe blur recall has NOT been measured; the human review is therefore mandatory, and reviewers must reject copies with visible\nfaces or plates. Annotators who need brake lights / plates for labelling use the raw video (raw-access list).",
+  "det_conf": 0.15,
+  "plate_band": 1.0,
+  "box_pad": 0.08,
+  "keep_frames": 2,
+  "segments": [
+    {
+      "file": "segment_000.mp4",
+      "frames": 1201,
+      "blurred_boxes": 81867
+    },
+    {
+      "file": "segment_001.mp4",
+      "frames": 1246,
+      "blurred_boxes": 39855
+    },
+    {
+      "file": "segment_002.mp4",
+      "frames": 1203,
+      "blurred_boxes": 27168
+    }
+  ]
+}

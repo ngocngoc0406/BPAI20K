@@ -1,0 +1,964 @@
+{
+ "directed": true,
+ "multigraph": true,
+ "graph": {
+  "name": "SafeDrive traffic KG",
+  "schema": "kg-1.0"
+ },
+ "nodes": [
+  {
+   "kind": "class",
+   "id": "Thing"
+  },
+  {
+   "kind": "class",
+   "id": "RoadUser"
+  },
+  {
+   "kind": "class",
+   "id": "Vehicle"
+  },
+  {
+   "kind": "class",
+   "id": "EgoVehicle"
+  },
+  {
+   "kind": "class",
+   "id": "Car"
+  },
+  {
+   "kind": "class",
+   "id": "Bus"
+  },
+  {
+   "kind": "class",
+   "id": "Truck"
+  },
+  {
+   "kind": "class",
+   "id": "Motorcycle"
+  },
+  {
+   "kind": "class",
+   "id": "Bicycle"
+  },
+  {
+   "kind": "class",
+   "id": "Pedestrian"
+  },
+  {
+   "kind": "class",
+   "id": "RoadScenario"
+  },
+  {
+   "kind": "class",
+   "id": "CutInScenario"
+  },
+  {
+   "kind": "class",
+   "id": "CarFollowingScenario"
+  },
+  {
+   "kind": "class",
+   "id": "CrossingScenario"
+  },
+  {
+   "kind": "class",
+   "id": "TrafficInteraction"
+  },
+  {
+   "kind": "class",
+   "id": "RiskFactor"
+  },
+  {
+   "kind": "class",
+   "id": "LowTTC"
+  },
+  {
+   "kind": "class",
+   "id": "HighClosingSpeed"
+  },
+  {
+   "kind": "class",
+   "id": "LateralIntrusion"
+  },
+  {
+   "kind": "class",
+   "id": "TrajectoryConflict"
+  },
+  {
+   "kind": "class",
+   "id": "VulnerableRoadUserInPath"
+  },
+  {
+   "kind": "class",
+   "id": "LeadDeceleration"
+  },
+  {
+   "kind": "class",
+   "id": "Occlusion"
+  },
+  {
+   "kind": "class",
+   "id": "PerceptionDegradation"
+  },
+  {
+   "kind": "class",
+   "id": "RiskLevel"
+  },
+  {
+   "kind": "class",
+   "id": "PotentialCollisionRisk"
+  },
+  {
+   "kind": "class",
+   "id": "ElevatedRisk"
+  },
+  {
+   "kind": "class",
+   "id": "LowRisk"
+  },
+  {
+   "kind": "class",
+   "id": "TrafficRule"
+  },
+  {
+   "kind": "class",
+   "id": "KeepSafeDistance"
+  },
+  {
+   "kind": "class",
+   "id": "YieldToPedestrians"
+  },
+  {
+   "kind": "class",
+   "id": "SafeLaneChange"
+  },
+  {
+   "kind": "class",
+   "id": "Evidence"
+  },
+  {
+   "kind": "class",
+   "id": "Warning"
+  },
+  {
+   "kind": "class",
+   "id": "Uncertainty"
+  },
+  {
+   "kind": "class",
+   "id": "ObservationReliability"
+  },
+  {
+   "kind": "class",
+   "id": "InsufficientEvidence"
+  },
+  {
+   "kind": "scene_relation",
+   "id": "rel:FOLLOWING"
+  },
+  {
+   "kind": "scene_relation",
+   "id": "rel:CUTTING_IN_FRONT_OF"
+  },
+  {
+   "kind": "scene_relation",
+   "id": "rel:APPROACHING"
+  },
+  {
+   "kind": "scene_relation",
+   "id": "rel:MOVING_AWAY"
+  },
+  {
+   "kind": "scene_relation",
+   "id": "rel:CROSSING_PATH"
+  },
+  {
+   "kind": "scene_relation",
+   "id": "rel:NEAR"
+  },
+  {
+   "kind": "scene_relation",
+   "id": "rel:OCCLUDING"
+  },
+  {
+   "kind": "scene_relation",
+   "id": "rel:SAME_DIRECTION"
+  },
+  {
+   "kind": "scene_relation",
+   "id": "rel:OPPOSITE_DIRECTION"
+  },
+  {
+   "kind": "scene_relation",
+   "id": "rel:POTENTIAL_CONFLICT"
+  },
+  {
+   "kind": "scene_relation",
+   "id": "rel:INTERACTING_WITH"
+  },
+  {
+   "kind": "rule",
+   "name": "cut-in",
+   "confidence": 0.8,
+   "id": "R01"
+  },
+  {
+   "kind": "rule",
+   "name": "fast approach / low image TTC",
+   "confidence": 0.7,
+   "id": "R02"
+  },
+  {
+   "kind": "rule",
+   "name": "low TTC with high closing speed",
+   "confidence": 0.85,
+   "id": "R03"
+  },
+  {
+   "kind": "rule",
+   "name": "vulnerable road user crossing",
+   "confidence": 0.75,
+   "id": "R04"
+  },
+  {
+   "kind": "rule",
+   "name": "lead deceleration proxy",
+   "confidence": 0.6,
+   "id": "R05"
+  },
+  {
+   "kind": "rule",
+   "name": "trajectory conflict",
+   "confidence": 0.6,
+   "id": "R06"
+  },
+  {
+   "kind": "rule",
+   "name": "occlusion near the path",
+   "confidence": 0.6,
+   "id": "R07"
+  },
+  {
+   "kind": "rule",
+   "name": "perception degradation",
+   "confidence": 0.8,
+   "id": "R08"
+  },
+  {
+   "kind": "rule",
+   "name": "insufficient evidence",
+   "confidence": 0.9,
+   "id": "R09"
+  },
+  {
+   "kind": "rule",
+   "name": "interaction between road users ahead",
+   "confidence": 0.4,
+   "id": "R10"
+  }
+ ],
+ "links": [
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "RoadUser",
+   "target": "Thing",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "Vehicle",
+   "target": "RoadUser",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "CAN_PERFORM",
+   "status": "hypothesis",
+   "source": "Vehicle",
+   "target": "CutInScenario",
+   "key": "CAN_PERFORM"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "EgoVehicle",
+   "target": "Vehicle",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "Car",
+   "target": "Vehicle",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "Bus",
+   "target": "Vehicle",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "Truck",
+   "target": "Vehicle",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "Motorcycle",
+   "target": "Vehicle",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "CAN_PERFORM",
+   "status": "hypothesis",
+   "source": "Motorcycle",
+   "target": "CutInScenario",
+   "key": "CAN_PERFORM"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "Bicycle",
+   "target": "RoadUser",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "Pedestrian",
+   "target": "RoadUser",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "CAN_PERFORM",
+   "status": "hypothesis",
+   "source": "Pedestrian",
+   "target": "CrossingScenario",
+   "key": "CAN_PERFORM"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "RoadScenario",
+   "target": "Thing",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "CutInScenario",
+   "target": "RoadScenario",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "INVOLVES",
+   "status": "hypothesis",
+   "source": "CutInScenario",
+   "target": "LateralIntrusion",
+   "key": "INVOLVES"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "CarFollowingScenario",
+   "target": "RoadScenario",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "CAN_INVOLVE",
+   "status": "hypothesis",
+   "source": "CarFollowingScenario",
+   "target": "LeadDeceleration",
+   "key": "CAN_INVOLVE"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "CrossingScenario",
+   "target": "RoadScenario",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "TrafficInteraction",
+   "target": "Thing",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "RiskFactor",
+   "target": "Thing",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "LowTTC",
+   "target": "RiskFactor",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "INDICATES",
+   "status": "hypothesis",
+   "source": "LowTTC",
+   "target": "PotentialCollisionRisk",
+   "key": "INDICATES"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "HighClosingSpeed",
+   "target": "RiskFactor",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "INCREASES",
+   "status": "hypothesis",
+   "source": "HighClosingSpeed",
+   "target": "PotentialCollisionRisk",
+   "key": "INCREASES"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "LateralIntrusion",
+   "target": "RiskFactor",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "INCREASES",
+   "status": "hypothesis",
+   "source": "LateralIntrusion",
+   "target": "PotentialCollisionRisk",
+   "key": "INCREASES"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "TrajectoryConflict",
+   "target": "RiskFactor",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "INDICATES",
+   "status": "hypothesis",
+   "source": "TrajectoryConflict",
+   "target": "PotentialCollisionRisk",
+   "key": "INDICATES"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "VulnerableRoadUserInPath",
+   "target": "RiskFactor",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "INCREASES",
+   "status": "hypothesis",
+   "source": "VulnerableRoadUserInPath",
+   "target": "PotentialCollisionRisk",
+   "key": "INCREASES"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "LeadDeceleration",
+   "target": "RiskFactor",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "INCREASES",
+   "status": "hypothesis",
+   "source": "LeadDeceleration",
+   "target": "PotentialCollisionRisk",
+   "key": "INCREASES"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "Occlusion",
+   "target": "RiskFactor",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "REDUCES",
+   "status": "hypothesis",
+   "source": "Occlusion",
+   "target": "ObservationReliability",
+   "key": "REDUCES"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "PerceptionDegradation",
+   "target": "RiskFactor",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "REDUCES",
+   "status": "hypothesis",
+   "source": "PerceptionDegradation",
+   "target": "ObservationReliability",
+   "key": "REDUCES"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "RiskLevel",
+   "target": "Thing",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "PotentialCollisionRisk",
+   "target": "RiskLevel",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "IS_A_LEVEL_ABOVE",
+   "status": "design",
+   "source": "PotentialCollisionRisk",
+   "target": "ElevatedRisk",
+   "key": "IS_A_LEVEL_ABOVE"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "ElevatedRisk",
+   "target": "RiskLevel",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "IS_A_LEVEL_ABOVE",
+   "status": "design",
+   "source": "ElevatedRisk",
+   "target": "LowRisk",
+   "key": "IS_A_LEVEL_ABOVE"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "LowRisk",
+   "target": "RiskLevel",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "TrafficRule",
+   "target": "Thing",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "KeepSafeDistance",
+   "target": "TrafficRule",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "RELATES_TO",
+   "status": "hypothesis",
+   "source": "KeepSafeDistance",
+   "target": "LowTTC",
+   "key": "RELATES_TO"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "YieldToPedestrians",
+   "target": "TrafficRule",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "RELATES_TO",
+   "status": "hypothesis",
+   "source": "YieldToPedestrians",
+   "target": "VulnerableRoadUserInPath",
+   "key": "RELATES_TO"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "SafeLaneChange",
+   "target": "TrafficRule",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "RELATES_TO",
+   "status": "hypothesis",
+   "source": "SafeLaneChange",
+   "target": "LateralIntrusion",
+   "key": "RELATES_TO"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "Evidence",
+   "target": "Thing",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "Warning",
+   "target": "Thing",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "Uncertainty",
+   "target": "Thing",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "ObservationReliability",
+   "target": "Uncertainty",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "CONDITIONS",
+   "status": "design",
+   "source": "ObservationReliability",
+   "target": "Warning",
+   "key": "CONDITIONS"
+  },
+  {
+   "predicate": "SUBCLASS_OF",
+   "status": "definition",
+   "source": "InsufficientEvidence",
+   "target": "Uncertainty",
+   "key": "SUBCLASS_OF"
+  },
+  {
+   "predicate": "INSTANTIATES",
+   "status": "definition",
+   "source": "rel:FOLLOWING",
+   "target": "CarFollowingScenario",
+   "key": "INSTANTIATES"
+  },
+  {
+   "predicate": "INSTANTIATES",
+   "status": "definition",
+   "source": "rel:CUTTING_IN_FRONT_OF",
+   "target": "CutInScenario",
+   "key": "INSTANTIATES"
+  },
+  {
+   "predicate": "INSTANTIATES",
+   "status": "definition",
+   "source": "rel:APPROACHING",
+   "target": "TrafficInteraction",
+   "key": "INSTANTIATES"
+  },
+  {
+   "predicate": "INSTANTIATES",
+   "status": "definition",
+   "source": "rel:MOVING_AWAY",
+   "target": "TrafficInteraction",
+   "key": "INSTANTIATES"
+  },
+  {
+   "predicate": "INSTANTIATES",
+   "status": "definition",
+   "source": "rel:CROSSING_PATH",
+   "target": "CrossingScenario",
+   "key": "INSTANTIATES"
+  },
+  {
+   "predicate": "INSTANTIATES",
+   "status": "definition",
+   "source": "rel:NEAR",
+   "target": "TrafficInteraction",
+   "key": "INSTANTIATES"
+  },
+  {
+   "predicate": "INSTANTIATES",
+   "status": "definition",
+   "source": "rel:OCCLUDING",
+   "target": "Occlusion",
+   "key": "INSTANTIATES"
+  },
+  {
+   "predicate": "INSTANTIATES",
+   "status": "definition",
+   "source": "rel:SAME_DIRECTION",
+   "target": "TrafficInteraction",
+   "key": "INSTANTIATES"
+  },
+  {
+   "predicate": "INSTANTIATES",
+   "status": "definition",
+   "source": "rel:OPPOSITE_DIRECTION",
+   "target": "TrafficInteraction",
+   "key": "INSTANTIATES"
+  },
+  {
+   "predicate": "INSTANTIATES",
+   "status": "definition",
+   "source": "rel:POTENTIAL_CONFLICT",
+   "target": "TrajectoryConflict",
+   "key": "INSTANTIATES"
+  },
+  {
+   "predicate": "INSTANTIATES",
+   "status": "definition",
+   "source": "rel:INTERACTING_WITH",
+   "target": "TrafficInteraction",
+   "key": "INSTANTIATES"
+  },
+  {
+   "predicate": "USES",
+   "status": "definition",
+   "source": "R01",
+   "target": "rel:CUTTING_IN_FRONT_OF",
+   "key": "USES"
+  },
+  {
+   "predicate": "SUPPORTED_BY",
+   "via": "Vehicle CAN_PERFORM CutInScenario",
+   "status": "definition",
+   "source": "R01",
+   "target": "Vehicle",
+   "key": "SUPPORTED_BY"
+  },
+  {
+   "predicate": "SUPPORTED_BY",
+   "via": "LateralIntrusion INCREASES PotentialCollisionRisk",
+   "status": "definition",
+   "source": "R01",
+   "target": "LateralIntrusion",
+   "key": "SUPPORTED_BY"
+  },
+  {
+   "predicate": "CONCLUDES",
+   "status": "hypothesis",
+   "source": "R01",
+   "target": "LateralIntrusion",
+   "key": "CONCLUDES"
+  },
+  {
+   "predicate": "USES",
+   "status": "definition",
+   "source": "R02",
+   "target": "rel:APPROACHING",
+   "key": "USES"
+  },
+  {
+   "predicate": "SUPPORTED_BY",
+   "via": "LowTTC INDICATES PotentialCollisionRisk",
+   "status": "definition",
+   "source": "R02",
+   "target": "LowTTC",
+   "key": "SUPPORTED_BY"
+  },
+  {
+   "predicate": "CONCLUDES",
+   "status": "hypothesis",
+   "source": "R02",
+   "target": "LowTTC",
+   "key": "CONCLUDES"
+  },
+  {
+   "predicate": "USES",
+   "status": "definition",
+   "source": "R03",
+   "target": "rel:APPROACHING",
+   "key": "USES"
+  },
+  {
+   "predicate": "SUPPORTED_BY",
+   "via": "HighClosingSpeed INCREASES PotentialCollisionRisk",
+   "status": "definition",
+   "source": "R03",
+   "target": "HighClosingSpeed",
+   "key": "SUPPORTED_BY"
+  },
+  {
+   "predicate": "CONCLUDES",
+   "status": "hypothesis",
+   "source": "R03",
+   "target": "HighClosingSpeed",
+   "key": "CONCLUDES"
+  },
+  {
+   "predicate": "SUPPORTED_BY",
+   "via": "LowTTC INDICATES PotentialCollisionRisk",
+   "status": "definition",
+   "source": "R03",
+   "target": "LowTTC",
+   "key": "SUPPORTED_BY"
+  },
+  {
+   "predicate": "USES",
+   "status": "definition",
+   "source": "R04",
+   "target": "rel:CROSSING_PATH",
+   "key": "USES"
+  },
+  {
+   "predicate": "SUPPORTED_BY",
+   "via": "Pedestrian CAN_PERFORM CrossingScenario",
+   "status": "definition",
+   "source": "R04",
+   "target": "Pedestrian",
+   "key": "SUPPORTED_BY"
+  },
+  {
+   "predicate": "SUPPORTED_BY",
+   "via": "VulnerableRoadUserInPath INCREASES PotentialCollisionRisk",
+   "status": "definition",
+   "source": "R04",
+   "target": "VulnerableRoadUserInPath",
+   "key": "SUPPORTED_BY"
+  },
+  {
+   "predicate": "CONCLUDES",
+   "status": "hypothesis",
+   "source": "R04",
+   "target": "VulnerableRoadUserInPath",
+   "key": "CONCLUDES"
+  },
+  {
+   "predicate": "USES",
+   "status": "definition",
+   "source": "R05",
+   "target": "rel:FOLLOWING",
+   "key": "USES"
+  },
+  {
+   "predicate": "SUPPORTED_BY",
+   "via": "CarFollowingScenario CAN_INVOLVE LeadDeceleration",
+   "status": "definition",
+   "source": "R05",
+   "target": "CarFollowingScenario",
+   "key": "SUPPORTED_BY"
+  },
+  {
+   "predicate": "SUPPORTED_BY",
+   "via": "LeadDeceleration INCREASES PotentialCollisionRisk",
+   "status": "definition",
+   "source": "R05",
+   "target": "LeadDeceleration",
+   "key": "SUPPORTED_BY"
+  },
+  {
+   "predicate": "CONCLUDES",
+   "status": "hypothesis",
+   "source": "R05",
+   "target": "LeadDeceleration",
+   "key": "CONCLUDES"
+  },
+  {
+   "predicate": "USES",
+   "status": "definition",
+   "source": "R06",
+   "target": "rel:POTENTIAL_CONFLICT",
+   "key": "USES"
+  },
+  {
+   "predicate": "SUPPORTED_BY",
+   "via": "TrajectoryConflict INDICATES PotentialCollisionRisk",
+   "status": "definition",
+   "source": "R06",
+   "target": "TrajectoryConflict",
+   "key": "SUPPORTED_BY"
+  },
+  {
+   "predicate": "CONCLUDES",
+   "status": "hypothesis",
+   "source": "R06",
+   "target": "TrajectoryConflict",
+   "key": "CONCLUDES"
+  },
+  {
+   "predicate": "USES",
+   "status": "definition",
+   "source": "R07",
+   "target": "rel:OCCLUDING",
+   "key": "USES"
+  },
+  {
+   "predicate": "SUPPORTED_BY",
+   "via": "Occlusion REDUCES ObservationReliability",
+   "status": "definition",
+   "source": "R07",
+   "target": "Occlusion",
+   "key": "SUPPORTED_BY"
+  },
+  {
+   "predicate": "CONCLUDES",
+   "status": "hypothesis",
+   "source": "R07",
+   "target": "Occlusion",
+   "key": "CONCLUDES"
+  },
+  {
+   "predicate": "SUPPORTED_BY",
+   "via": "PerceptionDegradation REDUCES ObservationReliability",
+   "status": "definition",
+   "source": "R08",
+   "target": "PerceptionDegradation",
+   "key": "SUPPORTED_BY"
+  },
+  {
+   "predicate": "CONCLUDES",
+   "status": "hypothesis",
+   "source": "R08",
+   "target": "PerceptionDegradation",
+   "key": "CONCLUDES"
+  },
+  {
+   "predicate": "SUPPORTED_BY",
+   "via": "ObservationReliability CONDITIONS Warning",
+   "status": "definition",
+   "source": "R09",
+   "target": "ObservationReliability",
+   "key": "SUPPORTED_BY"
+  },
+  {
+   "predicate": "CONCLUDES",
+   "status": "hypothesis",
+   "source": "R09",
+   "target": "InsufficientEvidence",
+   "key": "CONCLUDES"
+  },
+  {
+   "predicate": "USES",
+   "status": "definition",
+   "source": "R10",
+   "target": "rel:INTERACTING_WITH",
+   "key": "USES"
+  },
+  {
+   "predicate": "SUPPORTED_BY",
+   "via": "TrafficInteraction INCREASES ElevatedRisk",
+   "status": "definition",
+   "source": "R10",
+   "target": "TrafficInteraction",
+   "key": "SUPPORTED_BY"
+  },
+  {
+   "predicate": "CONCLUDES",
+   "status": "hypothesis",
+   "source": "R10",
+   "target": "ElevatedRisk",
+   "key": "CONCLUDES"
+  }
+ ]
+}

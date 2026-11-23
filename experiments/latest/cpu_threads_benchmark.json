@@ -1,0 +1,9 @@
+{
+  "cpu": "Intel i5-11400H (6 cores)",
+  "model": "v3",
+  "videos": 3,
+  "frames": 1215,
+  "threads_2_fps": 18.0,
+  "threads_4_fps": 19.3,
+  "note": "torch/cv2 thread limits; decoding + YOLOv8n + features + LightGBM; same machine (not an edge device)"
+}

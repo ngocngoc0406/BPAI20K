@@ -1,0 +1,72 @@
+# SafeDrive AI — default configuration.
+# All experiment scripts read this file; override with --config.
+seed: 42
+
+paths:
+  raw_dir: data/raw/nexar
+  annotations: data/annotations/nexar_train.csv
+  features_dir: data/processed/features
+  splits: data/processed/splits.json
+  uploads_dir: data/uploads
+  outputs_dir: data/outputs
+  models_dir: models
+  experiments_dir: experiments
+  reports_dir: reports
+
+dataset:
+  hf_repo: nexar-ai/nexar_collision_prediction
+  subset_per_class: 200          # 200 positive + 200 negative ~ 8 GB
+  split: {train: 0.70, val: 0.15, test: 0.15}
+
+preprocessing:
+  target_fps: 10.0               # features are computed on a 10 Hz time grid
+  detect_width: 640              # frames resized to this width before detection
+  flow_size: [160, 90]           # optical-flow resolution (w, h)
+  visual_size: 224
+
+detection:
+  weights: models/yolov8n.pt            # Ultralytics pretrained COCO weights (AGPL-3.0)
+  conf: 0.25
+  iou: 0.5
+  # COCO ids: person, bicycle, car, motorcycle, bus, truck
+  classes: [0, 1, 2, 3, 5, 7]
+
+tracking:
+  tracker: bytetrack.yaml
+  history_steps: 3               # steps used for finite differences
+
+visual:
+  backbone: resnet18             # torchvision ImageNet weights
+
+windows:
+  observation_s: 3.0             # default observation window
+  candidates_s: [1.0, 2.0, 3.0, 5.0]
+  eval_horizons_s: [0.5, 1.0, 1.5]   # Nexar test protocol: clip ends 0.5/1.0/1.5 s before event
+  train_pos_horizon_s: [0.3, 2.0]    # positive training windows end within this range before event
+  train_samples_per_video: 8
+  hard_negative_margin_s: null   # disabled (val design study: lowers mAP; margin 0 conflicts with positive horizons)
+  inference_stride_steps: 2      # 0.2 s at 10 Hz
+
+model:
+  type: gru
+  visual_proj: 64
+  motion_proj: 32
+  hidden: 64
+  dropout: 0.3
+  in_dropout: 0.3                # feature-level input dropout (val design study)
+  visual_mode: delta             # appearance change v_t - v_{t-1} (val design study: +0.09 val mAP vs abs)
+  epochs: 40
+  batch_size: 64
+  lr: 0.0003
+  weight_decay: 0.01
+  patience: 8
+  ensemble_size: 5
+  mc_samples: 20
+
+risk:
+  alarm_consecutive_steps: 3
+  trend_weight: 0.15
+  looming_weight: 0.10
+  uncertainty_quantile: 0.90     # UNCERTAIN if mutual information above this val quantile
+  fa_budget_per_hour: 30         # WARNING threshold = best timely detection on VAL streaming with FA/h <= budget
+  timely_window_s: 3.0           # an alarm counts as timely if its onset is within this many s before the event

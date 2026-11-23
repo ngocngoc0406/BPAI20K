@@ -1,0 +1,500 @@
+{
+  "name": "smoke_v33",
+  "source": "file:data\\raw\\nexar\\train\\positive\\00288.mp4",
+  "model": "models/safedrive_v3",
+  "profile": "sensitive",
+  "device": "cuda",
+  "minutes_requested": 1.0,
+  "ran_s": 60.313889265060425,
+  "alive_at_end": true,
+  "error": "",
+  "model_load_and_open_s": 5.180417776107788,
+  "capture_fps_mean": 30.591923792540214,
+  "processed_steps_per_s": 9.527544411788426,
+  "late_steps_fraction": 0.13414634146341464,
+  "mean_step_interval_s": 0.09967787714370037,
+  "step_ms_p50": 26.441399997565895,
+  "step_ms_p95": 80.96140999950876,
+  "e2e_ms_p50": 47.96338081359863,
+  "e2e_ms_p95": 100.50938129425045,
+  "cpu_percent_of_machine_mean": 17.710632183908046,
+  "gpu_util_mean": 3.5,
+  "gpu_mem_mb_max": 1347.0,
+  "rss_mb_start": 2991.169536,
+  "rss_mb_end": 3888.45568,
+  "rss_mb_max": 3888.45568,
+  "rss_slope_mb_per_min_second_half": 91.25652662037724,
+  "camera_interruptions": 0,
+  "camera_reconnects": 0,
+  "disconnect_recovery_s": null,
+  "alarms": 2,
+  "level_onsets": {
+    "CAUTION": 4,
+    "WARNING": 3,
+    "HIGH RISK": 2,
+    "UNCERTAIN": 0
+  },
+  "events": {
+    "risk_event": 0,
+    "warning_event": 0,
+    "potential_near_miss": 2
+  },
+  "clips": [
+    {
+      "category": "potential_near_miss",
+      "clip_status": "saved",
+      "frames_written": 100,
+      "frames_decoded": 100
+    },
+    {
+      "category": "potential_near_miss",
+      "clip_status": "saved",
+      "frames_written": 100,
+      "frames_decoded": 100
+    }
+  ],
+  "clips_saved": 2,
+  "clips_failed": 0,
+  "audio_decisions": 9,
+  "audio_played": 2,
+  "audio_reasons": {
+    "higher level WARNING recently": 1,
+    "ok": 2,
+    "global gap": 6
+  },
+  "audio_api_ms_max": 3.2525999995414168,
+  "audio_min_gap_s": 31.400733709335327,
+  "samples": [
+    {
+      "t": 2.0042941570281982,
+      "rss_mb": 2991.169536,
+      "cpu_percent": 12.466666666666667,
+      "capture_fps": null,
+      "step": null,
+      "step_ms": null,
+      "e2e_ms": null,
+      "camera": null,
+      "interruptions": null,
+      "gpu_util": 0.0,
+      "gpu_mem_mb": 1063.0
+    },
+    {
+      "t": 4.05004358291626,
+      "rss_mb": 3774.083072,
+      "cpu_percent": 14.825000000000001,
+      "capture_fps": 30.643191675526626,
+      "step": 10,
+      "step_ms": 24.590199998783646,
+      "e2e_ms": 41.34202003479004,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 6.050759315490723,
+      "rss_mb": 3774.337024,
+      "cpu_percent": 17.900000000000002,
+      "capture_fps": 30.58293211329816,
+      "step": 30,
+      "step_ms": 31.657599996833596,
+      "e2e_ms": 55.57608604431152,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 8.051393032073975,
+      "rss_mb": 3775.91808,
+      "cpu_percent": 16.016666666666666,
+      "capture_fps": 30.5221297955558,
+      "step": 50,
+      "step_ms": 39.40810000131023,
+      "e2e_ms": 70.42884826660156,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 10.051711082458496,
+      "rss_mb": 3777.593344,
+      "cpu_percent": 17.383333333333333,
+      "capture_fps": 30.549368307478833,
+      "step": 70,
+      "step_ms": 45.11139999885927,
+      "e2e_ms": 44.951677322387695,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 12.052242994308472,
+      "rss_mb": 3777.695744,
+      "cpu_percent": 18.425,
+      "capture_fps": 30.646147886550374,
+      "step": 90,
+      "step_ms": 61.4566999975068,
+      "e2e_ms": 73.20046424865723,
+      "camera": "running",
+      "interruptions": 0,
+      "gpu_util": 4.0,
+      "gpu_mem_mb": 1347.0
+    },
+    {
+      "t": 14.102473974227905,
+      "rss_mb": 3778.035712,
+      "cpu_percent": 18.066666666666666,
+      "capture_fps": 30.62094921700412,
+      "step": 111,
+      "step_ms": 16.562400000111666,
+      "e2e_ms": 27.745962142944336,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 16.10295605659485,
+      "rss_mb": 3781.070848,
+      "cpu_percent": 17.516666666666666,
+      "capture_fps": 30.657910069661206,
+      "step": 131,
+      "step_ms": 16.838100000313716,
+      "e2e_ms": 37.67752647399902,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 18.10335373878479,
+      "rss_mb": 3779.821568,
+      "cpu_percent": 18.425,
+      "capture_fps": 30.606985519611055,
+      "step": 151,
+      "step_ms": 15.051000002131332,
+      "e2e_ms": 15.873908996582031,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 20.103854179382324,
+      "rss_mb": 3783.49568,
+      "cpu_percent": 17.183333333333334,
+      "capture_fps": 30.599227105443983,
+      "step": 171,
+      "step_ms": 15.210699999443023,
+      "e2e_ms": 15.761613845825195,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 22.104292154312134,
+      "rss_mb": 3856.990208,
+      "cpu_percent": 17.966666666666665,
+      "capture_fps": 30.570354985281472,
+      "step": 191,
+      "step_ms": 18.173899999965215,
+      "e2e_ms": 34.30628776550293,
+      "camera": "running",
+      "interruptions": 0,
+      "gpu_util": 4.0,
+      "gpu_mem_mb": 1347.0
+    },
+    {
+      "t": 24.153464794158936,
+      "rss_mb": 3857.63328,
+      "cpu_percent": 17.241666666666667,
+      "capture_fps": 30.597486733283702,
+      "step": 211,
+      "step_ms": 17.88980000128504,
+      "e2e_ms": 32.102346420288086,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 26.15402364730835,
+      "rss_mb": 3858.092032,
+      "cpu_percent": 16.599999999999998,
+      "capture_fps": 30.566828144799924,
+      "step": 231,
+      "step_ms": 20.835400002397364,
+      "e2e_ms": 48.392295837402344,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 28.15442132949829,
+      "rss_mb": 3858.173952,
+      "cpu_percent": 18.491666666666667,
+      "capture_fps": 30.62745253352555,
+      "step": 251,
+      "step_ms": 19.386600000871113,
+      "e2e_ms": 13.690948486328125,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 30.15487241744995,
+      "rss_mb": 3858.178048,
+      "cpu_percent": 18.291666666666668,
+      "capture_fps": 30.551800997924026,
+      "step": 271,
+      "step_ms": 17.285400001128437,
+      "e2e_ms": 19.258499145507812,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 32.15510153770447,
+      "rss_mb": 3854.741504,
+      "cpu_percent": 19.275000000000002,
+      "capture_fps": 30.44303045177275,
+      "step": 291,
+      "step_ms": 19.594800000049872,
+      "e2e_ms": 18.645286560058594,
+      "camera": "running",
+      "interruptions": 0,
+      "gpu_util": 4.0,
+      "gpu_mem_mb": 1347.0
+    },
+    {
+      "t": 34.18964195251465,
+      "rss_mb": 3852.181504,
+      "cpu_percent": 19.916666666666668,
+      "capture_fps": 30.541378985629144,
+      "step": 311,
+      "step_ms": 18.960999997943873,
+      "e2e_ms": 37.573814392089844,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 36.19001793861389,
+      "rss_mb": 3855.106048,
+      "cpu_percent": 18.425,
+      "capture_fps": 30.585978777776734,
+      "step": 331,
+      "step_ms": 21.819999998115236,
+      "e2e_ms": 43.54357719421387,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 38.19035744667053,
+      "rss_mb": 3855.130624,
+      "cpu_percent": 19.075,
+      "capture_fps": 30.61812287884468,
+      "step": 351,
+      "step_ms": 16.710500000044703,
+      "e2e_ms": 37.156105041503906,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 40.19077491760254,
+      "rss_mb": 3854.024704,
+      "cpu_percent": 18.099999999999998,
+      "capture_fps": 30.646994249662153,
+      "step": 371,
+      "step_ms": 18.677500000194414,
+      "e2e_ms": 24.019956588745117,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 42.19102382659912,
+      "rss_mb": 3854.065664,
+      "cpu_percent": 18.166666666666668,
+      "capture_fps": 30.570959236610346,
+      "step": 391,
+      "step_ms": 18.02499999757856,
+      "e2e_ms": 25.101184844970703,
+      "camera": "running",
+      "interruptions": 0,
+      "gpu_util": 4.0,
+      "gpu_mem_mb": 1347.0
+    },
+    {
+      "t": 44.23784255981445,
+      "rss_mb": 3856.965632,
+      "cpu_percent": 17.175,
+      "capture_fps": 30.606675107506927,
+      "step": 412,
+      "step_ms": 55.477100002462976,
+      "e2e_ms": 72.50189781188965,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 46.2400004863739,
+      "rss_mb": 3856.982016,
+      "cpu_percent": 17.966666666666665,
+      "capture_fps": 30.595243458649108,
+      "step": 431,
+      "step_ms": 18.895699999120552,
+      "e2e_ms": 38.255929946899414,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 48.24044132232666,
+      "rss_mb": 3857.190912,
+      "cpu_percent": 17.125,
+      "capture_fps": 30.60257220260693,
+      "step": 451,
+      "step_ms": 23.678900000959402,
+      "e2e_ms": 52.19602584838867,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 50.240742683410645,
+      "rss_mb": 3857.260544,
+      "cpu_percent": 16.858333333333334,
+      "capture_fps": 30.247681620407047,
+      "step": 472,
+      "step_ms": 56.57460000293213,
+      "e2e_ms": 54.98814582824707,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 52.24096632003784,
+      "rss_mb": 3886.477312,
+      "cpu_percent": 16.275000000000002,
+      "capture_fps": 30.92853829048617,
+      "step": 491,
+      "step_ms": 39.91460000179359,
+      "e2e_ms": 50.35877227783203,
+      "camera": "running",
+      "interruptions": 0,
+      "gpu_util": 5.0,
+      "gpu_mem_mb": 1347.0
+    },
+    {
+      "t": 54.31274080276489,
+      "rss_mb": 3888.275456,
+      "cpu_percent": 17.483333333333334,
+      "capture_fps": 30.624488558384968,
+      "step": 513,
+      "step_ms": 18.73650000197813,
+      "e2e_ms": 22.942543029785156,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 56.31306052207947,
+      "rss_mb": 3888.390144,
+      "cpu_percent": 17.25,
+      "capture_fps": 30.60014277201525,
+      "step": 533,
+      "step_ms": 18.510500001866603,
+      "e2e_ms": 41.6712760925293,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 58.31331181526184,
+      "rss_mb": 3888.398336,
+      "cpu_percent": 17.641666666666666,
+      "capture_fps": 30.598803344423462,
+      "step": 553,
+      "step_ms": 19.385499999771127,
+      "e2e_ms": 46.416521072387695,
+      "camera": "running",
+      "interruptions": 0
+    },
+    {
+      "t": 60.313889265060425,
+      "rss_mb": 3888.45568,
+      "cpu_percent": 18.541666666666668,
+      "capture_fps": 30.61241496394569,
+      "step": 573,
+      "step_ms": 17.119100000854814,
+      "e2e_ms": 23.47087860107422,
+      "camera": "running",
+      "interruptions": 0
+    }
+  ],
+  "session_id": "20261121_100950_d2cb",
+  "realworld_metrics": {
+    "session_id": "20261121_100950_d2cb",
+    "data_kind": "demo_video",
+    "lighting": "unknown",
+    "weather": "unknown",
+    "road_types": [],
+    "traffic": "unknown",
+    "model": "safedrive_v3",
+    "profile": "sensitive",
+    "has_timeline": true,
+    "recording": {
+      "events": 2,
+      "clips_saved": 2,
+      "clip_success": 1.0,
+      "clip_completeness": 1.0,
+      "storage_mb": 18.903907,
+      "storage_mb_per_hour": 1129.1906991745507,
+      "full_video": {
+        "frames_written": 575,
+        "frames_dropped": 0,
+        "segments": 1,
+        "errors": 0
+      }
+    },
+    "hours": 0.01591666666666667,
+    "hours_wall": 0.01674111114607917,
+    "integrity": {
+      "steps_logged": 575,
+      "steps_expected": 574,
+      "missing_steps": 0,
+      "duplicate_steps": 1,
+      "stream_resets": 0,
+      "completeness": 1.0
+    },
+    "runtime": {
+      "step_ms": {
+        "p50": 26.4,
+        "p95": 80.92999999999999,
+        "mean": 45.4264347826087
+      },
+      "e2e_ms": {
+        "p50": 48.0,
+        "p95": 100.46999999999996,
+        "mean": 59.433391304347836
+      },
+      "capture_fps": {
+        "p50": 30.59,
+        "p95": 30.65,
+        "mean": 30.57356521739131
+      },
+      "processed_rate_hz": 9.540718105776973,
+      "degraded_share": 0.0034782608695652175,
+      "rss_mb": {
+        "first": 3760.7,
+        "last": 3888.4,
+        "max": 3888.4,
+        "slope_mb_per_min": 140.6389722350575
+      }
+    },
+    "alarms": 2,
+    "alarms_per_hour": 125.65445026178008,
+    "repeated_warnings": 0,
+    "reference_annotator": null,
+    "fully_reviewed": false,
+    "annotations": {
+      "normal": 0,
+      "potential_risk": 0,
+      "warning_worthy": 0,
+      "potential_near_miss": 0,
+      "confirmed_collision": 0,
+      "uncertain": 0
+    },
+    "fa_per_hour": null,
+    "note": "not annotated: false alarms / recall cannot be computed (alarms are not assumed false or true)"
+  },
+  "full_video": {
+    "segments": [
+      {
+        "file": "D:\\SanphambpAI\\data\\sessions\\20261121_100950_d2cb\\video\\segment_000.mp4",
+        "t_start": 0.0,
+        "t_end": 57.3,
+        "frames": 575
+      }
+    ],
+    "frames_written": 575,
+    "frames_dropped": 0,
+    "errors": []
+  }
+}

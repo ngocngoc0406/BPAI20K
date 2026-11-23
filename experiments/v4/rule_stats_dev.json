@@ -1,0 +1,96 @@
+{
+ "dev_videos": 1276,
+ "rules": [
+  {
+   "rule": "R01",
+   "name": "cut-in",
+   "kind": "risk",
+   "rate_2s_before_event": 0.07923197492163009,
+   "rate_normal_driving": 0.03922229745223589,
+   "lift": 2.0200748061257032,
+   "onsets_per_min_normal": 4.9347429275512695
+  },
+  {
+   "rule": "R02",
+   "name": "fast approach / low image TTC",
+   "kind": "risk",
+   "rate_2s_before_event": 0.27688087774294673,
+   "rate_normal_driving": 0.1388420944036334,
+   "lift": 1.9942142109871612,
+   "onsets_per_min_normal": 19.075550079345703
+  },
+  {
+   "rule": "R03",
+   "name": "low TTC with high closing speed",
+   "kind": "risk",
+   "rate_2s_before_event": 0.1554858934169279,
+   "rate_normal_driving": 0.08054574251507836,
+   "lift": 1.930404867616939,
+   "onsets_per_min_normal": 14.017557144165039
+  },
+  {
+   "rule": "R04",
+   "name": "vulnerable road user crossing",
+   "kind": "risk",
+   "rate_2s_before_event": 0.0007053291536050156,
+   "rate_normal_driving": 0.003242336834347113,
+   "lift": 0.2175372854952138,
+   "onsets_per_min_normal": 0.3212261497974396
+  },
+  {
+   "rule": "R05",
+   "name": "lead deceleration proxy",
+   "kind": "risk",
+   "rate_2s_before_event": 0.06865203761755485,
+   "rate_normal_driving": 0.025148881961302,
+   "lift": 2.7298246388524787,
+   "onsets_per_min_normal": 11.915995597839355
+  },
+  {
+   "rule": "R06",
+   "name": "trajectory conflict",
+   "kind": "risk",
+   "rate_2s_before_event": 0.13691222570532915,
+   "rate_normal_driving": 0.06749793391090982,
+   "lift": 2.028391356186382,
+   "onsets_per_min_normal": 10.344792366027832
+  },
+  {
+   "rule": "R07",
+   "name": "occlusion near the path",
+   "kind": "reliability",
+   "rate_2s_before_event": 0.045611285266457684,
+   "rate_normal_driving": 0.041832047080147,
+   "lift": 1.090343132839518,
+   "onsets_per_min_normal": 8.26659107208252
+  },
+  {
+   "rule": "R08",
+   "name": "perception degradation",
+   "kind": "reliability",
+   "rate_2s_before_event": 0.21191222570532914,
+   "rate_normal_driving": 0.2983122424967733,
+   "lift": 0.7103705296560912,
+   "onsets_per_min_normal": 24.315176010131836
+  },
+  {
+   "rule": "R09",
+   "name": "insufficient evidence",
+   "kind": "insufficient",
+   "rate_2s_before_event": 0.3551724137931035,
+   "rate_normal_driving": 0.34087088195865883,
+   "lift": 1.0419558624434784,
+   "onsets_per_min_normal": 51.04286575317383
+  },
+  {
+   "rule": "R10",
+   "name": "interaction between road users ahead",
+   "kind": "risk",
+   "rate_2s_before_event": 0.07100313479623825,
+   "rate_normal_driving": 0.05809781167884499,
+   "lift": 1.2221309674920586,
+   "onsets_per_min_normal": 7.870528221130371
+  }
+ ],
+ "note": "dev only; lift > 1 means the rule fires more often just before events than in normal driving"
+}

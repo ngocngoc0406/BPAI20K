@@ -1,0 +1,28 @@
+# SafeDrive AI — tested on Windows 11, Python 3.12, RTX 3050 4 GB (driver 462.75), CUDA wheels cu118.
+# GPU:  pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu118
+# CPU:  pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1
+torchvision==0.20.1
+ultralytics==8.3.40
+lap==0.5.14
+opencv-python-headless==5.1.0.95
+numpy==2.5.4
+pandas==2.3.3
+pyarrow==26.0.1
+scikit-learn==1.9.1
+xgboost==3.4.1
+lightgbm==4.7.0
+catboost==1.2.10
+plotly==7.1.0
+matplotlib==3.11.2
+streamlit==1.40.2
+PyYAML==6.0.3
+fpdf2==2.9.0
+imageio==2.38.2
+imageio-ffmpeg==0.8.1
+huggingface_hub==2.4.0
+python-dotenv==1.2.4
+psutil==7.2.2
+tqdm==4.70.1
+python-pptx==1.0.2
+pytest==9.2.0

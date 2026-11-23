@@ -1,0 +1,13 @@
+2026-11-19 21:50:00,864 | INFO    | robustness | clean          sev0 mAP=0.6827 F1=0.8213 ECE=0.0900 MI=0.0219
+2026-11-19 21:51:23,266 | INFO    | robustness | frame_drop     sev1 mAP=0.5563 F1=0.7514 ECE=0.1793 MI=0.0440
+2026-11-19 21:52:49,990 | INFO    | robustness | frame_drop     sev2 mAP=0.5180 F1=0.7368 ECE=0.2019 MI=0.0451
+2026-11-19 21:54:10,814 | INFO    | robustness | motion_blur    sev1 mAP=0.6255 F1=0.8039 ECE=0.1084 MI=0.0203
+2026-11-19 21:55:40,429 | INFO    | robustness | motion_blur    sev2 mAP=0.6299 F1=0.7283 ECE=0.1474 MI=0.0200
+2026-11-19 21:58:13,510 | INFO    | robustness | low_light      sev1 mAP=0.6090 F1=0.6901 ECE=0.1780 MI=0.0228
+2026-11-19 22:00:23,146 | INFO    | robustness | low_light      sev2 mAP=0.5373 F1=0.5255 ECE=0.2646 MI=0.0242
+2026-11-19 22:01:51,640 | INFO    | robustness | occlusion      sev1 mAP=0.6309 F1=0.7419 ECE=0.1091 MI=0.0194
+2026-11-19 22:03:14,006 | INFO    | robustness | occlusion      sev2 mAP=0.5398 F1=0.7200 ECE=0.2008 MI=0.0196
+2026-11-19 22:05:25,724 | INFO    | robustness | noise          sev1 mAP=0.6840 F1=0.7751 ECE=0.0920 MI=0.0215
+2026-11-19 22:07:21,951 | INFO    | robustness | noise          sev2 mAP=0.6774 F1=0.6703 ECE=0.1224 MI=0.0204
+2026-11-19 22:08:44,245 | INFO    | robustness | shake          sev1 mAP=0.4157 F1=0.6979 ECE=0.1264 MI=0.0246
+2026-11-19 22:10:07,391 | INFO    | robustness | shake          sev2 mAP=0.5024 F1=0.7465 ECE=0.0485 MI=0.0275

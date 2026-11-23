@@ -1,0 +1,19 @@
+REM SafeDrive v3.4.4 - least-privilege plan for the raw-data folder. NOTHING HAS BEEN RUN.
+REM Read every line, confirm, then run them one by one in a terminal of the folder owner (or an administrator).
+REM 0. record the state before (fingerprint + restorable copy)
+python scripts\data_acl.py snapshot
+icacls "D:\SanphambpAI\data" /save "D:\SanphambpAI\backups\acl\data_acl_before_20261122_231923.txt" /t /c
+REM 1. FIRST give the app account its own explicit right, so the app keeps working (gigabyte\ngocn)
+icacls "D:\SanphambpAI\data" /grant "gigabyte\ngocn:(OI)(CI)M"
+REM 2. stop inheriting from D:\ (the inherited entries are copied as explicit ones)
+icacls "D:\SanphambpAI\data" /inheritance:d
+REM 3. remove the broad groups (every Windows account)
+icacls "D:\SanphambpAI\data" /remove:g "NT AUTHORITY\Authenticated Users" "BUILTIN\Users" "Everyone"
+REM 4. (no separate Windows accounts in data/campaign/windows_accounts.json: everybody uses the app account)
+REM 5. check the result and record the new state
+python scripts\data_acl.py compare
+python scripts\data_acl.py inspect
+python scripts\data_acl.py snapshot
+REM 6. access test with REAL accounts: log in as a standard, non-authorised account -> python scripts\data_acl.py probe (must say DENIED); as the app account -> probe (must say allowed)
+REM ROLLBACK (restores the saved ACL of data\ and everything below):
+REM   icacls "D:\SanphambpAI" /restore "D:\SanphambpAI\backups\acl\data_acl_before_20261122_231923.txt" /c

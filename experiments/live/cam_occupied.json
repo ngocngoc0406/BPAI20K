@@ -1,0 +1,14 @@
+{
+  "holder": "HOLDING True",
+  "started": true,
+  "frames_received": true,
+  "state": "running",
+  "error": "",
+  "degraded": true,
+  "input_interval_s": 1.5006928443908691,
+  "status": "running",
+  "stalled_s": 0.0,
+  "capture_fps": 0.9995383169890769,
+  "seconds_to_outcome": 12.205240964889526,
+  "after_release_started": true
+}

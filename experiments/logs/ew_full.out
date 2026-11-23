@@ -1,0 +1,54 @@
+2026-11-20 00:49:05,020 | INFO    | ew_study | dev=1276 videos (5 folds), test=60, test_ext=164
+2026-11-20 00:49:37,712 | INFO    | ew_study | A A0 base (motion+diff)                         S=0.101 R@5/10/20=0.000/0.114/0.190 EDR@1/2/3=0.052/0.028/0.016 mAP=0.605
+2026-11-20 00:50:14,002 | INFO    | ew_study | A A1 +ego stats (homography)                    S=0.119 R@5/10/20=0.074/0.114/0.168 EDR@1/2/3=0.050/0.031/0.017 mAP=0.597
+2026-11-20 00:53:37,845 | INFO    | ew_study | A A2 +interactions, no compensation             S=0.115 R@5/10/20=0.000/0.154/0.193 EDR@1/2/3=0.055/0.031/0.019 mAP=0.616
+2026-11-20 06:27:53,102 | INFO    | ew_study | A A3 +interactions, homography-compensated      S=0.116 R@5/10/20=0.082/0.082/0.185 EDR@1/2/3=0.024/0.008/0.005 mAP=0.605
+2026-11-20 06:30:34,784 | INFO    | ew_study | A A4 +interactions, flow-compensated            S=0.089 R@5/10/20=0.000/0.085/0.182 EDR@1/2/3=0.025/0.014/0.008 mAP=0.616
+2026-11-20 06:31:15,769 | INFO    | ew_study | A A5 +ego(H) +interactions(H)                   S=0.098 R@5/10/20=0.000/0.103/0.191 EDR@1/2/3=0.036/0.022/0.013 mAP=0.619
+2026-11-20 06:31:51,849 | INFO    | ew_study | A A6 +ego(F) +interactions(F)                   S=0.104 R@5/10/20=0.002/0.139/0.172 EDR@1/2/3=0.047/0.027/0.019 mAP=0.611
+2026-11-20 06:31:58,963 | INFO    | ew_study |    paired vs base A1 +ego stats (homography)               dS=+0.003 CI90 [-0.016, +0.022] | dmAP=-0.007 CI95 [-0.022, +0.006]
+2026-11-20 06:32:06,132 | INFO    | ew_study |    paired vs base A2 +interactions, no compensation        dS=+0.025 CI90 [+0.001, +0.049] | dmAP=+0.012 CI95 [-0.005, +0.028]
+2026-11-20 06:32:13,207 | INFO    | ew_study |    paired vs base A3 +interactions, homography-compensated dS=+0.010 CI90 [-0.014, +0.032] | dmAP=+0.000 CI95 [-0.018, +0.018]
+2026-11-20 06:32:20,485 | INFO    | ew_study |    paired vs base A4 +interactions, flow-compensated       dS=+0.016 CI90 [-0.006, +0.039] | dmAP=+0.011 CI95 [-0.005, +0.026]
+2026-11-20 06:32:27,824 | INFO    | ew_study |    paired vs base A5 +ego(H) +interactions(H)              dS=+0.032 CI90 [+0.007, +0.059] | dmAP=+0.014 CI95 [-0.004, +0.033]
+2026-11-20 06:32:34,949 | INFO    | ew_study |    paired vs base A6 +ego(F) +interactions(F)              dS=+0.013 CI90 [-0.011, +0.037] | dmAP=+0.006 CI95 [-0.013, +0.024]
+2026-11-20 06:32:34,949 | INFO    | ew_study | Stage A: kept ['A2 +interactions, no compensation', 'A5 +ego(H) +interactions(H)'] -> selected features A2 +interactions, no compensation
+2026-11-20 06:33:07,366 | INFO    | ew_study | B L1 horizon 0.3-1.5                            S=0.116 R@5/10/20=0.000/0.152/0.196 EDR@1/2/3=0.050/0.022/0.009 mAP=0.629
+2026-11-20 06:33:39,239 | INFO    | ew_study | B L2 horizon 0.3-3.0                            S=0.087 R@5/10/20=0.000/0.067/0.193 EDR@1/2/3=0.024/0.011/0.009 mAP=0.596
+2026-11-20 06:34:11,881 | INFO    | ew_study | B L3 horizon 0.3-4.0                            S=0.085 R@5/10/20=0.061/0.061/0.133 EDR@1/2/3=0.025/0.009/0.006 mAP=0.563
+2026-11-20 06:34:43,835 | INFO    | ew_study | B L4 alert-aligned                              S=0.122 R@5/10/20=0.000/0.155/0.210 EDR@1/2/3=0.039/0.025/0.020 mAP=0.623
+2026-11-20 06:35:19,874 | INFO    | ew_study | B L5 L0 + hard negatives (>=2 s before alert)   S=0.143 R@5/10/20=0.110/0.110/0.208 EDR@1/2/3=0.017/0.008/0.003 mAP=0.611
+2026-11-20 06:35:53,816 | INFO    | ew_study | B L6 L2 + hard negatives (>=2 s before alert)   S=0.166 R@5/10/20=0.096/0.168/0.234 EDR@1/2/3=0.053/0.022/0.016 mAP=0.593
+2026-11-20 06:36:50,793 | INFO    | ew_study | B L7 dense negatives (40/video)                 S=0.166 R@5/10/20=0.099/0.166/0.234 EDR@1/2/3=0.060/0.036/0.020 mAP=0.617
+2026-11-20 06:39:22,935 | INFO    | ew_study | B L8 dense negatives (40/video) + mined         S=0.104 R@5/10/20=0.000/0.088/0.226 EDR@1/2/3=0.031/0.019/0.014 mAP=0.616
+2026-11-20 06:40:15,471 | INFO    | ew_study | B L0, window 2 s                                S=0.087 R@5/10/20=0.002/0.088/0.171 EDR@1/2/3=0.030/0.019/0.017 mAP=0.605
+2026-11-20 06:40:20,445 | INFO    | ew_study |    paired vs ref L1 horizon 0.3-1.5|W1                    dS=+0.005 CI90 [-0.013, +0.024]
+2026-11-20 06:40:25,402 | INFO    | ew_study |    paired vs ref L2 horizon 0.3-3.0|W1                    dS=-0.027 CI90 [-0.047, -0.008]
+2026-11-20 06:40:30,237 | INFO    | ew_study |    paired vs ref L3 horizon 0.3-4.0|W1                    dS=-0.040 CI90 [-0.064, -0.020]
+2026-11-20 06:40:35,262 | INFO    | ew_study |    paired vs ref L4 alert-aligned|W1                      dS=+0.014 CI90 [-0.005, +0.036]
+2026-11-20 06:40:40,350 | INFO    | ew_study |    paired vs ref L5 L0 + hard negatives (>=2 s before alert)|W1 dS=+0.022 CI90 [-0.002, +0.044]
+2026-11-20 06:40:45,488 | INFO    | ew_study |    paired vs ref L6 L2 + hard negatives (>=2 s before alert)|W1 dS=+0.016 CI90 [-0.006, +0.039]
+2026-11-20 06:40:50,692 | INFO    | ew_study |    paired vs ref L7 dense negatives (40/video)|W1         dS=+0.023 CI90 [+0.003, +0.044]
+2026-11-20 06:40:56,420 | INFO    | ew_study |    paired vs ref L8 dense negatives (40/video) + mined|W1 dS=+0.009 CI90 [-0.010, +0.030]
+2026-11-20 06:41:01,711 | INFO    | ew_study |    paired vs ref L0|W2                                    dS=-0.013 CI90 [-0.035, +0.014]
+2026-11-20 06:41:01,712 | INFO    | ew_study | Stage B: kept ['L7 dense negatives (40/video)|W1'] -> labels L7 dense negatives (40/video), W 1
+2026-11-20 06:41:04,309 | INFO    | ew_study | C k=1 alpha=1.0 S=0.003 R@5/10/20=0.003/0.003/0.003
+2026-11-20 06:41:06,933 | INFO    | ew_study | C k=1 alpha=0.6 S=0.077 R@5/10/20=0.006/0.006/0.219
+2026-11-20 06:41:09,419 | INFO    | ew_study | C k=1 alpha=0.3 S=0.052 R@5/10/20=0.003/0.003/0.149
+2026-11-20 06:41:11,900 | INFO    | ew_study | C k=2 alpha=1.0 S=0.128 R@5/10/20=0.000/0.163/0.221
+2026-11-20 06:41:14,152 | INFO    | ew_study | C k=2 alpha=0.6 S=0.079 R@5/10/20=0.003/0.003/0.230
+2026-11-20 06:41:16,403 | INFO    | ew_study | C k=2 alpha=0.3 S=0.096 R@5/10/20=0.002/0.118/0.168
+2026-11-20 06:41:18,722 | INFO    | ew_study | C k=3 alpha=1.0 S=0.166 R@5/10/20=0.099/0.166/0.234
+2026-11-20 06:41:21,187 | INFO    | ew_study | C k=3 alpha=0.6 S=0.108 R@5/10/20=0.003/0.116/0.205
+2026-11-20 06:41:23,243 | INFO    | ew_study | C k=3 alpha=0.3 S=0.084 R@5/10/20=0.000/0.088/0.165
+2026-11-20 06:41:25,255 | INFO    | ew_study | C k=5 alpha=1.0 S=0.120 R@5/10/20=0.063/0.118/0.179
+2026-11-20 06:41:27,686 | INFO    | ew_study | C k=5 alpha=0.6 S=0.108 R@5/10/20=0.049/0.105/0.171
+2026-11-20 06:41:29,729 | INFO    | ew_study | C k=5 alpha=0.3 S=0.098 R@5/10/20=0.050/0.103/0.141
+2026-11-20 06:41:29,730 | INFO    | ew_study | Stage C: selected k=3 alpha=1.0
+2026-11-20 06:41:51,883 | INFO    | ew_study | FINAL baseline_v2config  test     mAP=0.723 AUC=0.881 F1=0.814 ECE=0.069 | R@5=0.000(FA 0.0) R@10=0.100(FA 10.0) R@20=0.200(FA 10.0) EDR@1/2/3(10FA)=0.07/0.07/0.07
+2026-11-20 06:41:53,904 | INFO    | ew_study | FINAL baseline_v2config  test_ext mAP=0.659 AUC=0.802 F1=0.723 ECE=0.079 | R@5=0.000(FA 0.0) R@10=0.232(FA 18.9) R@20=0.280(FA 37.7) EDR@1/2/3(10FA)=0.16/0.09/0.05
+2026-11-20 06:41:56,538 | INFO    | ew_study | FINAL baseline_v2config  test_all mAP=0.607 AUC=0.809 F1=0.756 ECE=0.055 | R@5=0.000(FA 0.0) R@10=0.196(FA 16.5) R@20=0.259(FA 30.5) EDR@1/2/3(10FA)=0.13/0.08/0.05
+2026-11-20 06:43:14,167 | INFO    | ew_study | FINAL selected_v3        test     mAP=0.743 AUC=0.887 F1=0.823 ECE=0.076 | R@5=0.067(FA 0.0) R@10=0.067(FA 3.3) R@20=0.133(FA 6.6) EDR@1/2/3(10FA)=0.03/0.03/0.03
+2026-11-20 06:43:33,662 | INFO    | ew_study | FINAL selected_v3        test_ext mAP=0.668 AUC=0.803 F1=0.722 ECE=0.059 | R@5=0.110(FA 3.5) R@10=0.134(FA 14.1) R@20=0.220(FA 21.2) EDR@1/2/3(10FA)=0.07/0.02/0.02
+2026-11-20 06:43:37,358 | INFO    | ew_study | FINAL selected_v3        test_all mAP=0.620 AUC=0.816 F1=0.751 ECE=0.028 | R@5=0.098(FA 2.6) R@10=0.116(FA 11.3) R@20=0.196(FA 17.4) EDR@1/2/3(10FA)=0.06/0.03/0.03
+2026-11-20 06:43:54,865 | INFO    | ew_study | saved D:\SanphambpAI\experiments\ew_full_20261120_004859 (354.9 min)

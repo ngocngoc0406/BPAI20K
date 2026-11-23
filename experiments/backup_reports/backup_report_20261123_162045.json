@@ -1,0 +1,53 @@
+{
+ "at": "2026-11-23T16:20:45",
+ "records": 3,
+ "valid_external_backups": 1,
+ "last": {
+  "backup": {
+   "action": "backup",
+   "at": "2026-11-23T16:20:18",
+   "dest": "X:\\",
+   "dest_serial": "D4B08657",
+   "external": true,
+   "same_disk": false,
+   "encryption": "on",
+   "test_mode": false,
+   "sessions": [
+    "20261121_100950_d2cb",
+    "20261121_101150_b430"
+   ],
+   "ok": true,
+   "copied": 29,
+   "unchanged": 0,
+   "failed_verification": [],
+   "index_files": 29,
+   "warnings": []
+  },
+  "verify": {
+   "action": "verify",
+   "at": "2026-11-23T16:20:40",
+   "dest": "X:\\",
+   "dest_serial": "D4B08657",
+   "files": 29,
+   "files_present": 29,
+   "manifest_matches_index": true,
+   "unindexed_files": [],
+   "missing": [],
+   "hash_mismatch": [],
+   "ok": true
+  },
+  "restore_test": {
+   "action": "restore_test",
+   "at": "2026-11-23T16:20:42",
+   "dest": "X:\\",
+   "dest_serial": "D4B08657",
+   "restored_files": 29,
+   "missing": [],
+   "hash_mismatch": [],
+   "newer_in_source": [],
+   "ok": true,
+   "temp_folder_removed": true
+  }
+ },
+ "refused_or_failed": []
+}

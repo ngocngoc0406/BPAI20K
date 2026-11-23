@@ -1,0 +1,31 @@
+{
+ "files": {
+  "sessions/20261122_182010_d25c/audio_log.jsonl": "d7c3535951e46a18392ae78ec88ffd37b3180a355f004266ab2753af4fcd0afe",
+  "sessions/20261122_182010_d25c/provenance.json": "973bdad384739170071bbf0aa02513594068d4ea9e2ec1b052fb0b8534196df2",
+  "sessions/20261122_182010_d25c/session_report.json": "85f6ac3297be936f7cec9e90849ff4370ad7d37955e88fd774da6e34884523f1",
+  "sessions/20261122_182010_d25c/session_report.pdf": "2ad11e9c0b110116a54ce07d7103915c418e7fc4cf4ae6e5795652d59e36bf18",
+  "sessions/20261122_182010_d25c/system_log.csv": "169ec004d5d0f5f990f872c07936ed812e7fd42bce143d7ab88e4d7de0fb2fe3",
+  "sessions/20261122_182010_d25c/timeline.csv": "9efd24a10b03aa1128edd279283bb2087f97f8a4ba9f3752ee5b42f397c166c5",
+  "sessions/20261122_182010_d25c/trip_meta.json": "c30702504f85d662ea02c5f363b361c87aed50e141e891c0d5ee91a8fe5bfbab",
+  "sessions/20261122_182010_d25c/video/segment_000.mp4": "950cfdb912a804b92ae67c8f83a106e364cfb443ebaf8e5fcc6a4e43ad4e3f84",
+  "sessions/20261122_182010_d25c/video/segments.json": "618d353a888b771639b3516199b4cb265763936c55e8fa5970023f3f8039d1d8"
+ },
+ "runs": [
+  {
+   "at": "2026-11-22T18:22:12",
+   "sessions": [
+    "20261122_182010_d25c"
+   ],
+   "copied": 9,
+   "unchanged": 0
+  },
+  {
+   "at": "2026-11-22T18:22:12",
+   "sessions": [
+    "20261122_182010_d25c"
+   ],
+   "copied": 0,
+   "unchanged": 9
+  }
+ ]
+}

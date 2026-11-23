@@ -1,0 +1,11 @@
+{
+ "at": "2026-11-22T23:19:50",
+ "records": 0,
+ "valid_external_backups": 0,
+ "last": {
+  "backup": null,
+  "verify": null,
+  "restore_test": null
+ },
+ "refused_or_failed": []
+}

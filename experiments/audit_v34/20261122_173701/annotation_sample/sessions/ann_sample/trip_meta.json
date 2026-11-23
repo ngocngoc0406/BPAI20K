@@ -1,0 +1,28 @@
+{
+  "session_id": "ann_sample",
+  "data_kind": "demo_video",
+  "driver_consent": true,
+  "occupants_informed": true,
+  "supervisor_present": false,
+  "configured_before_driving": false,
+  "lighting": "unknown",
+  "weather": "unknown",
+  "road_types": [],
+  "traffic": "unknown",
+  "situations_expected": [],
+  "camera_mount": "unknown",
+  "location_note": "",
+  "notes": "AUDIT SAMPLE (demo replay), not campaign data",
+  "record_full_video": true,
+  "blur_people": true,
+  "created": "2026-11-22T17:41:24",
+  "fully_reviewed_by": [
+    "ANN-A",
+    "ANN-B"
+  ],
+  "campaign_id": "",
+  "trip_id": "",
+  "driver_id": "",
+  "regulations_checked": false,
+  "share_consent": false
+}

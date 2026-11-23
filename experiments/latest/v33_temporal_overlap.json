@@ -1,0 +1,35 @@
+{
+  "threshold_balanced": 0.9250482510644271,
+  "auc_video_peak_pre_event_vs_negative_peak": 0.6283482142857143,
+  "auc_video_mean_p": 0.7295121173469388,
+  "peak_quantiles": {
+    "pos": [
+      0.601,
+      0.783,
+      0.858,
+      0.933,
+      0.955
+    ],
+    "neg": [
+      0.505,
+      0.682,
+      0.809,
+      0.879,
+      0.934
+    ]
+  },
+  "pos_early_peak_median (before the 5 s window)": 0.7859298147891125,
+  "mean_abs_step_change_p": {
+    "pos": 0.06335965765311044,
+    "neg": 0.05349986383668274
+  },
+  "threshold_crossings_per_min_neg": 0.8945318135911123,
+  "above_threshold_runs_neg": {
+    "n": 31,
+    "share_shorter_than_3_steps": 0.6451612903225806
+  },
+  "above_threshold_runs_pos_pre_event": {
+    "n": 77,
+    "share_shorter_than_3_steps": 0.6623376623376623
+  }
+}

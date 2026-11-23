@@ -1,0 +1,31 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.pytest_cache/
+# data and large artefacts (dataset licence: do not redistribute videos)
+data/raw/**
+data/processed/features/**
+data/uploads/**
+data/outputs/**
+!data/**/.gitkeep
+*.mp4
+runs/
+experiments/*/test_predictions.csv
+backups/
+# --- added 2026-11-23 (V4 AI-core branch): never version private or heavy artefacts ---
+data/
+models/
+acl_probes/
+catboost_info/
+.claude/
+experiments/**/traces/
+experiments/**/*.npz
+experiments/**/*.npy
+experiments/**/*.pkl
+experiments/**/*.csv
+experiments/**/*.log
+*.hc
+experiments/**/*.jpg
+experiments/**/*.png
+experiments/**/*.mp4

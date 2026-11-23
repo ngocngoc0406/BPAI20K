@@ -1,0 +1,185 @@
+{
+  "salt": "safedrive-v34",
+  "groups": {
+    "driver:D00": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D01": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D02": {
+      "partition": "dev",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D03": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D04": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D05": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D06": {
+      "partition": "dev",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D07": {
+      "partition": "final_test",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D08": {
+      "partition": "dev",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D09": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D10": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D11": {
+      "partition": "final_test",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D12": {
+      "partition": "final_test",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D13": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D14": {
+      "partition": "final_test",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D15": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D16": {
+      "partition": "dev",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D17": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D18": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D19": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D20": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D21": {
+      "partition": "final_test",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D22": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D23": {
+      "partition": "final_test",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D24": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D25": {
+      "partition": "dev",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D26": {
+      "partition": "final_test",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D27": {
+      "partition": "final_test",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D28": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    },
+    "driver:D29": {
+      "partition": "train",
+      "assigned": "2026-11-22T17:41:28",
+      "method": "hash",
+      "reason": ""
+    }
+  }
+}

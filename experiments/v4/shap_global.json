@@ -1,0 +1,260 @@
+{
+ "A3 (v3 model)": {
+  "n_windows": 672,
+  "local_accuracy_max_error": 1.3322676295501878e-14,
+  "member_rank_stability": 0.06376797264450212,
+  "group_stability": {
+   "group_spearman": 0.9016369047619047,
+   "same_top_group_all_members": 0.7217261904761905,
+   "groups": [
+    "v3_frame_difference",
+    "v3_interaction",
+    "v3_motion"
+   ]
+  },
+  "group_share_all": {
+   "v3_motion": 0.48414127157540343,
+   "v3_frame_difference": 0.33115811938721074,
+   "v3_interaction": 0.18470060903738578
+  },
+  "group_share_positive_windows": {
+   "v3_motion": 0.4849343716006248,
+   "v3_frame_difference": 0.3194225499791877,
+   "v3_interaction": 0.1956430784201875
+  },
+  "top_features": [
+   {
+    "feature": "diff_g00__min",
+    "group": "v3_frame_difference",
+    "mean_abs_shap": 0.15149011589889103
+   },
+   {
+    "feature": "max_area__last",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.11846480158577777
+   },
+   {
+    "feature": "diff_g03__min",
+    "group": "v3_frame_difference",
+    "mean_abs_shap": 0.11220540877263631
+   },
+   {
+    "feature": "sum_area__std",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.10293658716150848
+   },
+   {
+    "feature": "flow_mag_mean__min",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.08921869675807469
+   },
+   {
+    "feature": "lead_gap_rate@none__min",
+    "group": "v3_interaction",
+    "mean_abs_shap": 0.08816642495831137
+   },
+   {
+    "feature": "lead_bottom_y__max",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.08528557980612073
+   },
+   {
+    "feature": "flow_mag_center__last",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.07449529006776508
+   },
+   {
+    "feature": "mean_speed__max",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.0649629481333513
+   },
+   {
+    "feature": "diff_center__last",
+    "group": "v3_frame_difference",
+    "mean_abs_shap": 0.06089427397460482
+   },
+   {
+    "feature": "lead_lateral_in__min",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.0594045612029838
+   },
+   {
+    "feature": "lead_area__last",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.059247899260704916
+   },
+   {
+    "feature": "lead_gap@none__min",
+    "group": "v3_interaction",
+    "mean_abs_shap": 0.05615485103508791
+   },
+   {
+    "feature": "lead_gap_rate@none__mean",
+    "group": "v3_interaction",
+    "mean_abs_shap": 0.054783451245130316
+   },
+   {
+    "feature": "diff_g30__min",
+    "group": "v3_frame_difference",
+    "mean_abs_shap": 0.053159203846481935
+   },
+   {
+    "feature": "looming_all__max",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.05267796323898862
+   },
+   {
+    "feature": "mean_det_conf__max",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.051878014276228276
+   },
+   {
+    "feature": "max_area__std",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.05162248106983758
+   },
+   {
+    "feature": "flow_mag_center__delta",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.049838665631604974
+   },
+   {
+    "feature": "lead_res_loom@none__last",
+    "group": "v3_interaction",
+    "mean_abs_shap": 0.04739234311388353
+   }
+  ]
+ },
+ "A6 (v4 research model)": {
+  "n_windows": 672,
+  "local_accuracy_max_error": 1.865174681370263e-14,
+  "member_rank_stability": 0.06437935154286657,
+  "group_stability": {
+   "group_spearman": 0.9488392857142858,
+   "same_top_group_all_members": 0.6428571428571429,
+   "groups": [
+    "knowledge_graph",
+    "scene_graph",
+    "v3_frame_difference",
+    "v3_interaction",
+    "v3_motion"
+   ]
+  },
+  "group_share_all": {
+   "v3_motion": 0.4097752485078308,
+   "v3_frame_difference": 0.306369226893656,
+   "v3_interaction": 0.13898212505665117,
+   "scene_graph": 0.11265537122001873,
+   "knowledge_graph": 0.03221802832184336
+  },
+  "group_share_positive_windows": {
+   "v3_motion": 0.40820561111297,
+   "v3_frame_difference": 0.29421663925555575,
+   "v3_interaction": 0.1477641157528249,
+   "scene_graph": 0.11813290587464423,
+   "knowledge_graph": 0.03168072800400516
+  },
+  "top_features": [
+   {
+    "feature": "diff_g00__min",
+    "group": "v3_frame_difference",
+    "mean_abs_shap": 0.1570478423661831
+   },
+   {
+    "feature": "diff_g03__min",
+    "group": "v3_frame_difference",
+    "mean_abs_shap": 0.10343772773146125
+   },
+   {
+    "feature": "lead_area__last",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.10313370992424653
+   },
+   {
+    "feature": "sum_area__std",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.10121308231034626
+   },
+   {
+    "feature": "max_area__last",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.08849271666031373
+   },
+   {
+    "feature": "diff_center__last",
+    "group": "v3_frame_difference",
+    "mean_abs_shap": 0.07994787737213027
+   },
+   {
+    "feature": "lead_bottom_y__max",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.07991629675934556
+   },
+   {
+    "feature": "lead_gap_rate@none__min",
+    "group": "v3_interaction",
+    "mean_abs_shap": 0.07582640303788743
+   },
+   {
+    "feature": "flow_mag_mean__min",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.07008795287564387
+   },
+   {
+    "feature": "flow_mag_center__last",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.06535030289654464
+   },
+   {
+    "feature": "mean_speed__max",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.06450709217104554
+   },
+   {
+    "feature": "max_area__min",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.054914857612411945
+   },
+   {
+    "feature": "diff_g30__min",
+    "group": "v3_frame_difference",
+    "mean_abs_shap": 0.05325532278337762
+   },
+   {
+    "feature": "max_area__std",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.05260505009646098
+   },
+   {
+    "feature": "res_speed_max@none__max",
+    "group": "v3_interaction",
+    "mean_abs_shap": 0.052309899355657864
+   },
+   {
+    "feature": "flow_mag_center__delta",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.05147170829436274
+   },
+   {
+    "feature": "diff_mean__last",
+    "group": "v3_frame_difference",
+    "mean_abs_shap": 0.05067715686012152
+   },
+   {
+    "feature": "lead_gap@none__min",
+    "group": "v3_interaction",
+    "mean_abs_shap": 0.048440741062782754
+   },
+   {
+    "feature": "lead_lateral_in__min",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.047980785316220506
+   },
+   {
+    "feature": "flow_mag_center__min",
+    "group": "v3_motion",
+    "mean_abs_shap": 0.04452963345711884
+   }
+  ]
+ }
+}

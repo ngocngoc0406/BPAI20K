@@ -1,0 +1,410 @@
+{
+  "at": "2026-11-23T17:07:52",
+  "run_dir": "D:\\SanphambpAI\\experiments\\audit_v344\\20261123_170738",
+  "decision": {
+    "verdict": "NO-GO",
+    "blocking": [
+      {
+        "key": "6_bitlocker_data_drive",
+        "status": "FAIL",
+        "action": "D: is not protected (off). As administrator: Settings > Privacy & security > Device encryption (Windows Home) or BitLocker (Pro), then python scripts/encryption_status.py --drive D as administrator.",
+        "who": "Windows administrator"
+      },
+      {
+        "key": "7_folder_permissions",
+        "status": "NOT VERIFIED",
+        "action": "Access test with real Windows accounts is missing: log in as a STANDARD account that is not authorised and run python scripts/data_acl.py probe (must be denied), and run it as the app account.",
+        "who": "Windows administrator / owner"
+      },
+      {
+        "key": "11_privacy_review",
+        "status": "NOT VERIFIED",
+        "action": "COORD-01: either review a blurred copy of a consented PARKED campaign-camera clip (page 11) or record the no-sharing decision (page 14).",
+        "who": "COORD-01"
+      },
+      {
+        "key": "12_camera_readiness",
+        "status": "NOT VERIFIED",
+        "action": "In the vehicle, parked: page 14 → 'Test camera'; COORD-01 answers every point of the camera / safety checklist.",
+        "who": "operator + COORD-01"
+      },
+      {
+        "key": "13_legal_review",
+        "status": "NOT VERIFIED",
+        "action": "COORD-01 answers the legal checklist on page 14 (docs/SAFEDRIVE_V344_CAMPAIGN_CHECKLIST.md §3).",
+        "who": "COORD-01 / owner"
+      },
+      {
+        "key": "14_annotation_training",
+        "status": "NOT VERIFIED",
+        "action": "ANN-A and ANN-B label TRAINING_PACK_01 blind and submit (page 11, workspace 'Annotator training'); COORD-01 then opens the result.",
+        "who": "ANN-A, ANN-B, COORD-01"
+      }
+    ],
+    "counts": {
+      "PASS": 9,
+      "FAIL": 1,
+      "BLOCKED": 0,
+      "NOT VERIFIED": 5
+    }
+  },
+  "items": [
+    {
+      "key": "1_model_hash",
+      "title": "Model hash = frozen reference",
+      "status": "PASS",
+      "evidence": {
+        "safedrive_v3": {
+          "current": "77a3361d3ebba791",
+          "frozen": "77a3361d3ebba791",
+          "same": true
+        },
+        "safedrive_v3_stabilized": {
+          "current": "206373f53b52af2b",
+          "frozen": "206373f53b52af2b",
+          "same": true
+        }
+      },
+      "action": null,
+      "who": null,
+      "checked_at": "2026-11-23T17:07:38",
+      "evidence_at": null
+    },
+    {
+      "key": "2_feature_hash",
+      "title": "Feature-configuration hash = frozen reference",
+      "status": "PASS",
+      "evidence": {
+        "safedrive_v3": {
+          "current": "870ab60075fbe67a",
+          "frozen": "870ab60075fbe67a",
+          "same": true
+        },
+        "safedrive_v3_stabilized": {
+          "current": "728b8317b5ec28c7",
+          "frozen": "728b8317b5ec28c7",
+          "same": true
+        }
+      },
+      "action": null,
+      "who": null,
+      "checked_at": "2026-11-23T17:07:38",
+      "evidence_at": null
+    },
+    {
+      "key": "3_threshold_hash",
+      "title": "Threshold / alert / calibration hash = frozen reference",
+      "status": "PASS",
+      "evidence": {
+        "safedrive_v3": {
+          "current": "050ad4ca855e44d3",
+          "frozen": "050ad4ca855e44d3",
+          "same": true
+        },
+        "safedrive_v3_stabilized": {
+          "current": "a4bc6e06e3417f38",
+          "frozen": "a4bc6e06e3417f38",
+          "same": true
+        }
+      },
+      "action": null,
+      "who": null,
+      "checked_at": "2026-11-23T17:07:38",
+      "evidence_at": null
+    },
+    {
+      "key": "4_software_provenance",
+      "title": "Software hash equals the frozen one or is recorded in the changelog",
+      "status": "PASS",
+      "evidence": {
+        "current": "f96ac921a216f11e",
+        "same_as_frozen": false,
+        "in_changelog": true
+      },
+      "action": null,
+      "who": "developer",
+      "checked_at": "2026-11-23T17:07:38",
+      "evidence_at": null
+    },
+    {
+      "key": "5_access_lists",
+      "title": "raw_access and coordinators filled with pseudonyms",
+      "status": "PASS",
+      "evidence": {
+        "raw_access": [
+          "ANN-A",
+          "ANN-B"
+        ],
+        "coordinators": [
+          "COORD-01"
+        ],
+        "invalid_names": []
+      },
+      "action": null,
+      "who": "owner",
+      "checked_at": "2026-11-23T17:07:38",
+      "evidence_at": null
+    },
+    {
+      "key": "6_bitlocker_data_drive",
+      "title": "Data drive D: encrypted (protection on, 100 % encrypted)",
+      "status": "FAIL",
+      "evidence": {
+        "protection": "off",
+        "protection_status": "Protection Off",
+        "conversion_status": "Fully Decrypted",
+        "percentage_encrypted": 0.0,
+        "encryption_method": "None",
+        "serial": "7C618800",
+        "at": "2026-11-23T00:10:47",
+        "method": "manage-bde",
+        "source": "recorded administrator check",
+        "record_age_days": 0.7,
+        "edition": "Microsoft Windows 11 Home Single Language"
+      },
+      "action": "D: is not protected (off). As administrator: Settings > Privacy & security > Device encryption (Windows Home) or BitLocker (Pro), then python scripts/encryption_status.py --drive D as administrator.",
+      "who": "Windows administrator",
+      "checked_at": "2026-11-23T17:07:46",
+      "evidence_at": "2026-11-23T00:10:47"
+    },
+    {
+      "key": "7_folder_permissions",
+      "title": "data/ reachable only by authorised accounts (least privilege, verified with real accounts)",
+      "status": "NOT VERIFIED",
+      "evidence": {
+        "paths": [
+          "D:\\SanphambpAI\\data",
+          "D:\\SanphambpAI\\data\\sessions",
+          "D:\\SanphambpAI\\data\\campaign"
+        ],
+        "problems": [],
+        "account_map": {
+          "app_account": "gigabyte\\ngocn",
+          "accounts": {
+            "ANN-A": "gigabyte\\ngocn",
+            "ANN-B": "gigabyte\\ngocn",
+            "COORD-01": "gigabyte\\ngocn"
+          },
+          "note": "2026-11-23: this PC has one enabled Windows account; every campaign person uses the app on it (set at the owner request)"
+        },
+        "acl_fingerprint": "8c54cb8d9a7686ab",
+        "acl_measured_since": "2026-11-23T17:04:16",
+        "probes_since_change": 2,
+        "denied_standard_account_probe": [],
+        "unauthorised_access_probe": [],
+        "app_account_probe_ok": true,
+        "person_accounts_not_probed": [],
+        "entries": [
+          "data: GIGABYTE\\ngocn delete/read/write",
+          "data: BUILTIN\\Administrators change_permissions/delete/read/write",
+          "data: BUILTIN\\Administrators change_permissions/delete/read/write",
+          "data: NT AUTHORITY\\SYSTEM change_permissions/delete/read/write",
+          "data: NT AUTHORITY\\SYSTEM change_permissions/delete/read/write",
+          "sessions: GIGABYTE\\ngocn delete/read/write (I)",
+          "sessions: BUILTIN\\Administrators change_permissions/delete/read/write (I)",
+          "sessions: BUILTIN\\Administrators change_permissions/delete/read/write (I)",
+          "sessions: NT AUTHORITY\\SYSTEM change_permissions/delete/read/write (I)",
+          "sessions: NT AUTHORITY\\SYSTEM change_permissions/delete/read/write (I)",
+          "campaign: GIGABYTE\\ngocn delete/read/write (I)",
+          "campaign: BUILTIN\\Administrators change_permissions/delete/read/write (I)",
+          "campaign: BUILTIN\\Administrators change_permissions/delete/read/write (I)",
+          "campaign: NT AUTHORITY\\SYSTEM change_permissions/delete/read/write (I)",
+          "campaign: NT AUTHORITY\\SYSTEM change_permissions/delete/read/write (I)"
+        ]
+      },
+      "action": "Access test with real Windows accounts is missing: log in as a STANDARD account that is not authorised and run python scripts/data_acl.py probe (must be denied), and run it as the app account.",
+      "who": "Windows administrator / owner",
+      "checked_at": "2026-11-23T17:07:46",
+      "evidence_at": "2026-11-23T17:04:26"
+    },
+    {
+      "key": "8_external_backup_destination",
+      "title": "External, encrypted backup drive with enough space",
+      "status": "PASS",
+      "evidence": {
+        "external_drives": [
+          {
+            "letter": "E",
+            "bus": "USB",
+            "free_gb": 19.0,
+            "enough_space": false,
+            "encryption": "unknown"
+          },
+          {
+            "letter": "X",
+            "bus": "USB",
+            "free_gb": 42.6,
+            "enough_space": true,
+            "encryption": "on"
+          }
+        ],
+        "need_gb": 22.6
+      },
+      "action": null,
+      "who": "user",
+      "checked_at": "2026-11-23T17:07:52",
+      "evidence_at": null
+    },
+    {
+      "key": "9_backup_verification",
+      "title": "Latest backup covers every session and was re-verified by SHA-256",
+      "status": "PASS",
+      "evidence": {
+        "last_backup_at": "2026-11-23T16:20:18",
+        "covers_all_sessions": true,
+        "no_newer_files": true,
+        "verified_after_backup": true,
+        "verify": {
+          "at": "2026-11-23T16:20:40",
+          "ok": true,
+          "files": 29,
+          "missing": [],
+          "hash_mismatch": []
+        }
+      },
+      "action": null,
+      "who": "user",
+      "checked_at": "2026-11-23T17:07:52",
+      "evidence_at": null
+    },
+    {
+      "key": "10_restore_verification",
+      "title": "Test restore into a temporary folder matched every hash",
+      "status": "PASS",
+      "evidence": {
+        "last_restore_test": {
+          "action": "restore_test",
+          "at": "2026-11-23T16:20:42",
+          "dest": "X:\\",
+          "dest_serial": "D4B08657",
+          "restored_files": 29,
+          "missing": [],
+          "hash_mismatch": [],
+          "newer_in_source": [],
+          "ok": true,
+          "temp_folder_removed": true
+        }
+      },
+      "action": null,
+      "who": "user",
+      "checked_at": "2026-11-23T17:07:52",
+      "evidence_at": null
+    },
+    {
+      "key": "11_privacy_review",
+      "title": "Blurred copy of campaign-camera footage approved by a coordinator, or sharing disabled",
+      "status": "NOT VERIFIED",
+      "evidence": {
+        "approved_campaign_camera_copies": [],
+        "other_copies": [],
+        "sharing_policy": {
+          "sharing_enabled": true,
+          "decided_by": null
+        },
+        "note": "demo / Nexar video never counts: it is pre-anonymised and is not campaign-camera footage"
+      },
+      "action": "COORD-01: either review a blurred copy of a consented PARKED campaign-camera clip (page 11) or record the no-sharing decision (page 14).",
+      "who": "COORD-01",
+      "checked_at": "2026-11-23T17:07:52",
+      "evidence_at": null
+    },
+    {
+      "key": "12_camera_readiness",
+      "title": "Camera check measured OK and the 8-point camera / safety checklist confirmed",
+      "status": "NOT VERIFIED",
+      "evidence": {
+        "camera_check": null,
+        "safety_checklist_by": null,
+        "safety_points_open": [
+          "camera_fixed",
+          "no_view_obstruction",
+          "airbag_clear",
+          "cable_safe",
+          "no_laptop_while_moving",
+          "supervisor_present",
+          "parked_stable_run",
+          "stop_procedure"
+        ],
+        "evidence_ref": null
+      },
+      "action": "In the vehicle, parked: page 14 → 'Test camera'; COORD-01 answers every point of the camera / safety checklist.",
+      "who": "operator + COORD-01",
+      "checked_at": "2026-11-23T17:07:52",
+      "evidence_at": null
+    },
+    {
+      "key": "13_legal_review",
+      "title": "Legal checklist (8 points) answered by a coordinator; nothing left for legal advice",
+      "status": "NOT VERIFIED",
+      "evidence": {
+        "by": null,
+        "evidence_ref": null,
+        "open": [
+          "purpose",
+          "consent",
+          "faces_plates",
+          "retention",
+          "access",
+          "sharing",
+          "deletion_on_request",
+          "local_rules"
+        ],
+        "needs_legal_advice": [],
+        "note": "a human confirmation; the software cannot verify legality"
+      },
+      "action": "COORD-01 answers the legal checklist on page 14 (docs/SAFEDRIVE_V344_CAMPAIGN_CHECKLIST.md §3).",
+      "who": "COORD-01 / owner",
+      "checked_at": "2026-11-23T17:07:52",
+      "evidence_at": null
+    },
+    {
+      "key": "14_annotation_training",
+      "title": "Both annotators completed the training pack independently and met the criteria",
+      "status": "NOT VERIFIED",
+      "evidence": {
+        "pack": "TRAINING_PACK_01",
+        "annotators": [
+          "ANN-A",
+          "ANN-B"
+        ],
+        "submitted": [],
+        "complete": false,
+        "passed": false,
+        "criteria_results": null,
+        "invalid": {
+          "ANN-A": "not submitted",
+          "ANN-B": "not submitted"
+        }
+      },
+      "action": "ANN-A and ANN-B label TRAINING_PACK_01 blind and submit (page 11, workspace 'Annotator training'); COORD-01 then opens the result.",
+      "who": "ANN-A, ANN-B, COORD-01",
+      "checked_at": "2026-11-23T17:07:52",
+      "evidence_at": null
+    },
+    {
+      "key": "15_disk_space",
+      "title": "Free space on the data drive ≥ 10 h estimate + 30 % reserve",
+      "status": "PASS",
+      "evidence": {
+        "free_gb": 94.8,
+        "need_gb": 24.3,
+        "estimate": {
+          "hours": 10.0,
+          "video_mb": 6650,
+          "shared_mb": 6650,
+          "clips_mb": 4428,
+          "small_mb": 82,
+          "local_mb": 17810,
+          "local_with_reserve_gb": 22.6,
+          "backup_with_reserve_gb": 22.6,
+          "clip_scenario": "high (demo-like density)",
+          "reserve": 0.3
+        }
+      },
+      "action": null,
+      "who": null,
+      "checked_at": "2026-11-23T17:07:52",
+      "evidence_at": null
+    }
+  ]
+}

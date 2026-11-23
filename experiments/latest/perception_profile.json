@@ -1,0 +1,54 @@
+{
+  "device": "cuda",
+  "gpu": "GeForce RTX 3050 Laptop GPU",
+  "n_videos": 8,
+  "n_frames": 1207,
+  "decode_resize_ms_per_frame": 5.807878359263453,
+  "detectors": {
+    "yolov8n@640": {
+      "ms_per_frame": 9.3078567549415,
+      "fps": 107.43611835980441,
+      "mean_dets_per_frame": 5.015741507870754,
+      "peak_vram_mb": 62.311936
+    },
+    "yolov8n@480": {
+      "ms_per_frame": 9.278765865971968,
+      "fps": 107.77295326173727,
+      "mean_dets_per_frame": 3.9428334714167357,
+      "peak_vram_mb": 67.936256,
+      "recall_vs_v8n640": 0.6858275520317145
+    },
+    "yolov8n@320": {
+      "ms_per_frame": 9.810147557292648,
+      "fps": 101.93526592335728,
+      "mean_dets_per_frame": 2.1913835956917977,
+      "peak_vram_mb": 75.549696,
+      "recall_vs_v8n640": 0.3622398414271556
+    },
+    "yolo11n@640": {
+      "ms_per_frame": 12.437661558520064,
+      "fps": 80.40096567147533,
+      "mean_dets_per_frame": 5.056338028169014,
+      "peak_vram_mb": 99.859968,
+      "recall_vs_v8n640": 0.8242484307895607
+    },
+    "yolo11n@480": {
+      "ms_per_frame": 12.267893950501959,
+      "fps": 81.5135836709025,
+      "mean_dets_per_frame": 3.855012427506214,
+      "peak_vram_mb": 102.263808,
+      "recall_vs_v8n640": 0.6496531219028742
+    },
+    "yolo11n@320": {
+      "ms_per_frame": 11.031270753140866,
+      "fps": 90.65138753078617,
+      "mean_dets_per_frame": 2.3189726594863296,
+      "peak_vram_mb": 107.359232,
+      "recall_vs_v8n640": 0.38833828873472087
+    }
+  },
+  "flow_ms_per_frame": 3.162564208820561,
+  "frame_diff_ms_per_frame": 0.4959465616962131,
+  "resnet18_ms_per_frame": 3.3158240264996133,
+  "process_rss_gb": 4.486549504
+}

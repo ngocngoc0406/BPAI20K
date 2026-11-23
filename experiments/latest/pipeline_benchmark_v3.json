@@ -1,0 +1,93 @@
+{
+  "videos": [
+    "00022",
+    "00063",
+    "00099",
+    "00151",
+    "00202"
+  ],
+  "v3@cuda": {
+    "frames": 2019.0,
+    "wall_s": 48.07511170010548,
+    "end_to_end_fps": 41.99678229755564,
+    "realtime_factor_10hz": 4.199678229755564,
+    "extract_s": 47.24771920009516,
+    "predict_s": 0.7663072999566793,
+    "predict_ms_per_frame": 0.3795479445055371,
+    "peak_vram_gb": 0.073887232,
+    "process_rss_gb": 3.718828032,
+    "cnn_loaded": false
+  },
+  "v3@cpu": {
+    "frames": 2019.0,
+    "wall_s": 104.55322809994686,
+    "end_to_end_fps": 19.310738048852517,
+    "realtime_factor_10hz": 1.9310738048852518,
+    "extract_s": 103.59347750002053,
+    "predict_s": 0.8986044001067057,
+    "predict_ms_per_frame": 0.4450739970810826,
+    "peak_vram_gb": 0.0,
+    "process_rss_gb": 3.792932864,
+    "cnn_loaded": false
+  },
+  "v3_stabilized@cuda": {
+    "frames": 2019.0,
+    "wall_s": 59.3359080000082,
+    "end_to_end_fps": 34.02661336200873,
+    "realtime_factor_10hz": 3.402661336200873,
+    "extract_s": 58.4692231999943,
+    "predict_s": 0.8057526998454705,
+    "predict_ms_per_frame": 0.39908504202351186,
+    "peak_vram_gb": 0.073887232,
+    "process_rss_gb": 3.821109248,
+    "cnn_loaded": false
+  },
+  "v3_stabilized@cpu": {
+    "frames": 2019.0,
+    "wall_s": 116.39148889994249,
+    "end_to_end_fps": 17.346629200144182,
+    "realtime_factor_10hz": 1.7346629200144181,
+    "extract_s": 115.41250700014643,
+    "predict_s": 0.9105588999809697,
+    "predict_ms_per_frame": 0.4509949975141009,
+    "peak_vram_gb": 0.0,
+    "process_rss_gb": 3.831185408,
+    "cnn_loaded": false
+  },
+  "v2_light@cuda": {
+    "frames": 2019.0,
+    "wall_s": 47.32313629996497,
+    "end_to_end_fps": 42.66412072104136,
+    "realtime_factor_10hz": 4.266412072104136,
+    "extract_s": 47.18300629989244,
+    "predict_s": 0.07321029994636774,
+    "predict_ms_per_frame": 0.0362606735742287,
+    "peak_vram_gb": 0.073887232,
+    "process_rss_gb": 3.663634432,
+    "cnn_loaded": false
+  },
+  "v2_light@cpu": {
+    "frames": 2019.0,
+    "wall_s": 103.68084029993042,
+    "end_to_end_fps": 19.473221804138433,
+    "realtime_factor_10hz": 1.9473221804138432,
+    "extract_s": 103.52593839983456,
+    "predict_s": 0.08174479997251183,
+    "predict_ms_per_frame": 0.04048776620728669,
+    "peak_vram_gb": 0.0,
+    "process_rss_gb": 3.717107712,
+    "cnn_loaded": false
+  },
+  "v1_lstm@cuda": {
+    "frames": 2019.0,
+    "wall_s": 56.27849730011076,
+    "end_to_end_fps": 35.87515830839404,
+    "realtime_factor_10hz": 3.587515830839404,
+    "extract_s": 55.332675400190055,
+    "predict_s": 0.8826995000708848,
+    "predict_ms_per_frame": 0.4371963843837963,
+    "peak_vram_gb": 0.197088256,
+    "process_rss_gb": 4.084178944,
+    "cnn_loaded": true
+  }
+}
