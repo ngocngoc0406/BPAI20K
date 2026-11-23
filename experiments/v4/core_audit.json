@@ -1,0 +1,330 @@
+{
+ "A1_perception_proxies_dev": {
+  "all": {
+   "dets_per_frame": 2.7414022900963837,
+   "conf_mean": 0.5792306661605835,
+   "conf_lt_0_4": 0.20344827586206896,
+   "untracked_share": 0.018301610541727673,
+   "tracks_per_min": 77.7087140352368,
+   "track_len_median": 8.0,
+   "short_tracks_share": 0.23214285714285715,
+   "id_switch_proxy_per_min": 2.9850745702131554,
+   "midframe_loss_per_min": 9.102416745917807,
+   "class_changes_per_track": 0.2716032101530422
+  },
+  "by_light": {
+   "Bright": {
+    "dets_per_frame": 3.0911450401055944,
+    "conf_mean": 0.6066259145736694,
+    "conf_lt_0_4": 0.1695583596214511,
+    "untracked_share": 0.01373283395755306,
+    "tracks_per_min": 57.556209414016735,
+    "track_len_median": 9.0,
+    "short_tracks_share": 0.23333333333333334,
+    "id_switch_proxy_per_min": 0.7425742293792488,
+    "midframe_loss_per_min": 13.55254360065696,
+    "class_changes_per_track": 0.26243781094527363
+   },
+   "Dark": {
+    "dets_per_frame": 0.6142506142506142,
+    "conf_mean": 0.4380325973033905,
+    "conf_lt_0_4": 0.48443486590038315,
+    "untracked_share": 0.22673594709494566,
+    "tracks_per_min": 19.696970455939187,
+    "track_len_median": 4.75,
+    "short_tracks_share": 0.3333333333333333,
+    "id_switch_proxy_per_min": 0.0,
+    "midframe_loss_per_min": 3.35195537869662,
+    "class_changes_per_track": 0.0
+   },
+   "Normal": {
+    "dets_per_frame": 2.796833773087071,
+    "conf_mean": 0.5825734734535217,
+    "conf_lt_0_4": 0.19764812302125734,
+    "untracked_share": 0.016363636363636365,
+    "tracks_per_min": 80.59701339575518,
+    "track_len_median": 8.0,
+    "short_tracks_share": 0.23076923076923078,
+    "id_switch_proxy_per_min": 2.9925188171127513,
+    "midframe_loss_per_min": 9.183673290648299,
+    "class_changes_per_track": 0.28421052631578947
+   },
+   "Twilight": {
+    "dets_per_frame": 2.532156970866648,
+    "conf_mean": 0.570533037185669,
+    "conf_lt_0_4": 0.22230889235569423,
+    "untracked_share": 0.02046204620462046,
+    "tracks_per_min": 76.50191256240566,
+    "track_len_median": 7.0,
+    "short_tracks_share": 0.23529411764705882,
+    "id_switch_proxy_per_min": 2.9850745702131554,
+    "midframe_loss_per_min": 10.421900103527761,
+    "class_changes_per_track": 0.3004444444444444
+   }
+  },
+  "by_weather": {
+   "Clear": {
+    "dets_per_frame": 2.415422885572139,
+    "conf_mean": 0.5672900676727295,
+    "conf_lt_0_4": 0.2157190635451505,
+    "untracked_share": 0.031322505800464036,
+    "tracks_per_min": 70.39106295262901,
+    "track_len_median": 7.0,
+    "short_tracks_share": 0.23809523809523808,
+    "id_switch_proxy_per_min": 2.970296917516995,
+    "midframe_loss_per_min": 9.02255604593163,
+    "class_changes_per_track": 0.23636363636363636
+   },
+   "Cloudy": {
+    "dets_per_frame": 3.512376237623762,
+    "conf_mean": 0.5968101024627686,
+    "conf_lt_0_4": 0.17426545086119555,
+    "untracked_share": 0.004375,
+    "tracks_per_min": 91.04477439150124,
+    "track_len_median": 8.5,
+    "short_tracks_share": 0.2222222222222222,
+    "id_switch_proxy_per_min": 3.030303147067567,
+    "midframe_loss_per_min": 8.955223710639466,
+    "class_changes_per_track": 0.34285714285714286
+   },
+   "Rain": {
+    "dets_per_frame": 2.6,
+    "conf_mean": 0.5554008483886719,
+    "conf_lt_0_4": 0.222007722007722,
+    "untracked_share": 0.01619644723092999,
+    "tracks_per_min": 76.88787051119473,
+    "track_len_median": 7.0,
+    "short_tracks_share": 0.23684210526315788,
+    "id_switch_proxy_per_min": 2.962962962962963,
+    "midframe_loss_per_min": 14.814814814814813,
+    "class_changes_per_track": 0.22857142857142856
+   },
+   "Snow": {
+    "dets_per_frame": 0.0,
+    "conf_mean": NaN,
+    "conf_lt_0_4": NaN,
+    "untracked_share": NaN,
+    "tracks_per_min": 0.0,
+    "track_len_median": NaN,
+    "short_tracks_share": NaN,
+    "id_switch_proxy_per_min": 0.0,
+    "midframe_loss_per_min": 0.0,
+    "class_changes_per_track": 0.0
+   },
+   "nan": {
+    "dets_per_frame": 4.077311176031977,
+    "conf_mean": 0.60579913854599,
+    "conf_lt_0_4": 0.1446777605496602,
+    "untracked_share": 0.022753796110031952,
+    "tracks_per_min": 121.20508449299477,
+    "track_len_median": 8.75,
+    "short_tracks_share": 0.19575045207956598,
+    "id_switch_proxy_per_min": 8.94416790701437,
+    "midframe_loss_per_min": 20.812603464303866,
+    "class_changes_per_track": 0.47679324894514763
+   }
+  },
+  "n_videos": 1276,
+  "videos_by_light": {
+   "Normal": 1153,
+   "Twilight": 72,
+   "Dark": 41,
+   "Bright": 10
+  }
+ },
+ "A2_scene_graph_dev": {
+  "videos": 300,
+  "steps": 112037,
+  "minutes": 186.22833280563364,
+  "seconds": 98.46742639999138,
+  "relations": {
+   "APPROACHING": {
+    "per_min": 215.28410524860354,
+    "segments": 10039,
+    "lifetime_median_s": 0.2,
+    "lifetime_p10_s": 0.1,
+    "flicker_share": 0.18328518776770594
+   },
+   "NEAR": {
+    "per_min": 820.6860776631329,
+    "segments": 21846,
+    "lifetime_median_s": 0.2,
+    "lifetime_p10_s": 0.1,
+    "flicker_share": 0.3470658244072141
+   },
+   "OCCLUDING": {
+    "per_min": 47.60285326321636,
+    "segments": 2793,
+    "lifetime_median_s": 0.2,
+    "lifetime_p10_s": 0.1,
+    "flicker_share": 0.1908342284282134
+   },
+   "MOVING_AWAY": {
+    "per_min": 216.65876181209856,
+    "segments": 9373,
+    "lifetime_median_s": 0.2,
+    "lifetime_p10_s": 0.1,
+    "flicker_share": 0.277925957537608
+   },
+   "INTERACTING_WITH": {
+    "per_min": 88.30020519575069,
+    "segments": 4884,
+    "lifetime_median_s": 0.2,
+    "lifetime_p10_s": 0.1,
+    "flicker_share": 0.19226044226044225
+   },
+   "FOLLOWING": {
+    "per_min": 261.517671700526,
+    "segments": 5575,
+    "lifetime_median_s": 0.3,
+    "lifetime_p10_s": 0.1,
+    "flicker_share": 0.349237668161435
+   },
+   "POTENTIAL_CONFLICT": {
+    "per_min": 63.61545432705293,
+    "segments": 2924,
+    "lifetime_median_s": 0.2,
+    "lifetime_p10_s": 0.1,
+    "flicker_share": 0.18057455540355677
+   },
+   "CUTTING_IN_FRONT_OF": {
+    "per_min": 32.68031189621374,
+    "segments": 1318,
+    "lifetime_median_s": 0.3,
+    "lifetime_p10_s": 0.1,
+    "flicker_share": 0.15857359635811835
+   },
+   "SAME_DIRECTION": {
+    "per_min": 18.917637004660037,
+    "segments": 1684,
+    "lifetime_median_s": 0.1,
+    "lifetime_p10_s": 0.1,
+    "flicker_share": 0.22209026128266032
+   },
+   "CROSSING_PATH": {
+    "per_min": 2.4915650213347313,
+    "segments": 68,
+    "lifetime_median_s": 0.3,
+    "lifetime_p10_s": 0.1,
+    "flicker_share": 0.25
+   }
+  },
+  "invariant_violations": {},
+  "rule_fire_steps": {
+   "R08": 30410,
+   "R09": 44042,
+   "R02": 16510,
+   "R03": 9520,
+   "R10": 7809,
+   "R06": 9058,
+   "R07": 6574,
+   "R05": 3420,
+   "R01": 5871,
+   "R04": 377
+  },
+  "rule_jaccard_top": {
+   "R02&R03": 0.5766202301635373,
+   "R01&R10": 0.3227615548249855,
+   "R03&R06": 0.2129798903107861,
+   "R02&R06": 0.20399321906197024,
+   "R08&R09": 0.18967115144929853,
+   "R02&R09": 0.18334961891733437,
+   "R03&R09": 0.11689882392192844,
+   "R06&R09": 0.10860578729800827,
+   "R07&R09": 0.10636065573770492,
+   "R02&R05": 0.09241394431045823
+  },
+  "r03_subset_of_r02": 1.0
+ },
+ "A3_A7_risk_and_decision_dev_oof": {
+  "thresholds_dev": {
+   "@10FA": 0.9250482510644271,
+   "@20FA": 0.9016206214836614
+  },
+  "positives": 638,
+  "hit_before_event": 106,
+  "late_only_after_event": 49,
+  "missed": 483,
+  "lead_time_median_s": 0.775500381469727,
+  "lead_time_quartiles_s": [
+   0.385750095367432,
+   1.5182498092651375
+  ],
+  "median_p_before_event": {
+   "-3.0s": 0.5167782243728718,
+   "-2.0s": 0.5987845950779342,
+   "-1.0s": 0.7068208770984759,
+   "-0.5s": 0.7737333323801058
+  },
+  "normal_driving": {
+   "level_transitions_per_min": 0.8457541935001217,
+   "moderate_or_high_episodes_per_hour": 19.316923573597943,
+   "re_onsets_within_2s_share": 0.03968253968253968
+  },
+  "calibration_dev_oof": {
+   "oof_ece_raw": 0.28657551013161736,
+   "oof_brier_raw": 0.2708726867934544,
+   "oof_ece_platt": 0.015839267815018654,
+   "oof_brier_platt": 0.1716585587563441
+  }
+ },
+ "A3_single_feature_auroc_dev_oof": {
+  "tau_center__last": 0.616,
+  "looming_center__last": 0.613,
+  "looming_all__max": 0.665,
+  "max_lateral_in__last": 0.51,
+  "lead_bottom_y__last": 0.643,
+  "res_tau_center@none__min": 0.632,
+  "res_loom_center@none__max": 0.632,
+  "ego_ttr_min@none__min": 0.598,
+  "cutin_score@none__max": 0.563,
+  "lead_gap_rate@none__min": 0.678,
+  "pair_ttr_min@none__min": 0.559,
+  "max_pair_closing__max": 0.603
+ },
+ "A4_uncertainty_heldout_descriptive": {
+  "n_windows": 672,
+  "ece": 0.02837294836265426,
+  "brier": 0.17552665709522083,
+  "error_detection_auroc": {
+   "mutual_info (epistemic)": 0.6456996884164223,
+   "entropy (total)": 0.6998258797653958,
+   "aleatoric (entropy - MI)": 0.6928152492668621,
+   "1 - perception reliability": 0.5233229472140764
+  },
+  "risk_coverage_error_rate": {
+   "entropy": {
+    "cov1.0": 0.2619047619047619,
+    "cov0.9": 0.23636363636363636,
+    "cov0.8": 0.2174721189591078,
+    "cov0.7": 0.1851063829787234,
+    "cov0.5": 0.14583333333333334
+   },
+   "mutual_info": {
+    "cov1.0": 0.2619047619047619,
+    "cov0.9": 0.24793388429752067,
+    "cov0.8": 0.22490706319702602,
+    "cov0.7": 0.2127659574468085,
+    "cov0.5": 0.17857142857142858
+   },
+   "1-reliability": {
+    "cov1.0": 0.2619047619047619,
+    "cov0.9": 0.26611570247933886,
+    "cov0.8": 0.2620817843866171,
+    "cov0.7": 0.2574468085106383,
+    "cov0.5": 0.24702380952380953
+   }
+  },
+  "reliability_vs_injected_errors_dev": {
+   "mean_clean": 0.5696820020675659,
+   "mean_noisy": 0.5610418319702148,
+   "auroc_noisy_vs_clean_steps": 0.523849062059726
+  }
+ },
+ "A6_xai_temporal_consistency_heldout": {
+  "videos": 40,
+  "top_group_same_as_previous_step": 0.8568965517241379,
+  "group_rank_spearman_consecutive": 0.8176724137931034
+ },
+ "runtime_min": 4.857655236666809
+}
