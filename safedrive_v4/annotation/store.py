@@ -91,6 +91,11 @@ class AnnotationStore:
         if self.submitted(record.video_id, record.annotator) and not reason.strip():
             raise ValidationError("this video is submitted: a revision needs a reason (it is recorded in the history)")
         cur = self.state(record.video_id, record.annotator)
+        if rtype == "counterfactual":   # must rest on this annotator's own evidence-bearing observed records
+            for rid in list(record.observed_facts) + [record.event_id]:
+                r = cur.get(rid)
+                if r is None or r["type"] not in ("event", "interaction") or not r.get("evidence"):
+                    raise ValidationError(f"counterfactual: {rid} is not an observed event/interaction with evidence of this annotator")
         op = "update" if record.record_id in cur else "create"
         return self._append(record.video_id, record.annotator, {"op": op, "type": rtype, "record_id": record.record_id,
                                                                 "record": asdict(record), "reason": reason})
