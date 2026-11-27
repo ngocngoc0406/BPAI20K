@@ -1,2 +1,0 @@
-{"session_id": "ann_sample", "key": "a02e539c45|499d575e96", "annotator": "ANN-A", "reason": "evasive swerve visible at 44 s", "status": "unresolved", "agreed_category": "", "created": "2026-11-22T17:41:24"}
-{"session_id": "ann_sample", "key": "a02e539c45|499d575e96", "annotator": "ANN-B", "reason": "no evasive action, normal braking", "status": "unresolved", "agreed_category": "", "created": "2026-11-22T17:41:24"}

@@ -35,16 +35,41 @@ img = frame_at(meta.get("source"), tr.timestamp)
 if img is not None and snap is not None:
     a.image(draw(img, snap, {f"obj:{i}" for i in tr.track_ids}), caption=f"evidence frame at {tr.timestamp:.1f} s (frames {tr.frame_refs[0]}–{tr.frame_refs[-1]})",
             use_container_width=True)
+from safedrive_v4.explainability.views import views  # noqa: E402
+
+try:
+    from safedrive_v4.annotation.store import AnnotationStore
+    _ann = AnnotationStore()
+except Exception:  # noqa: BLE001  (encrypted volume not mounted / no annotations yet)
+    _ann = None
+V = views(tr, _ann)
+st.info("Three different kinds of explanation, shown separately: (1) what the MODEL computed, (2) what was OBSERVED, "
+        "(3) how the knowledge-graph RULES read the situation. The rules are not used by the v3 model.")
 with b:
-    st.subheader("Road users involved")
-    rows = [{"road user": k, "type": n.get("node_type"), "confidence": n.get("confidence"), "visibility": n.get("visibility_status"),
-             "image TTC proxy (s)": n.get("tau_s"), "track age (steps)": n.get("track_age_steps")}
-            for k, n in tr.nodes.items() if k != "ego"]
-    if rows:
-        st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True, use_container_width=True)
+    st.subheader("2 · Evidence: what was observed")
+    ev_ = V["evidence_explanation"]
+    if ev_["measured_tracks"]:
+        st.dataframe(pd.DataFrame(ev_["measured_tracks"]).astype(str), hide_index=True, use_container_width=True)
     else:
-        st.write("None (no rule fired).")
-st.subheader("Reasoning path (knowledge graph)")
+        st.write("No road user is linked to this warning (no rule fired).")
+    if ev_["human_evidence_frames"]:
+        st.caption(f"Human evidence (adjudicated annotations): {len(ev_['human_evidence_frames'])} frame(s)")
+        for h in ev_["human_evidence_frames"][:4]:
+            pth = _ann.evidence_path(tr.video_id, h["image_sha256"]) if _ann else None
+            if pth and pth.exists():
+                st.image(str(pth), caption=f"{h['category']} · {h['frame_t']:.1f} s · {h['provenance'].get('adjudication', '')}")
+    else:
+        st.caption("No adjudicated human annotation overlaps this warning.")
+st.subheader("1 · Model explanation: what the v3 model computed (exact TreeSHAP)")
+sh = pd.DataFrame(tr.shap)
+if len(sh):
+    st.markdown("**By feature group** (stable across ensemble members)")
+    st.dataframe(sh[sh["level"].str.startswith("group")].drop(columns=["level"]), hide_index=True, use_container_width=True)
+    with st.expander("Individual features (indicative only: unstable ranking across ensemble members)"):
+        st.dataframe(sh[sh["level"].str.startswith("feature")].drop(columns=["level"]), hide_index=True, use_container_width=True)
+else:
+    st.write("Not available: " + V["model_explanation"].get("reason", ""))
+st.subheader("3 · Rule-based interpretation (knowledge graph; NOT used by the v3 model)")
 if tr.kg_paths:
     for p in tr.kg_paths:
         st.code(" → ".join(p), language=None)
@@ -53,16 +78,7 @@ if tr.kg_paths:
         st.markdown(f"- **{f['rule_id']}** {f['explanation']} · belief {op.get('belief', 0):.2f}, uncertainty {op.get('uncertainty', 1):.2f}"
                     + (f" · exceptions: {'; '.join(f['exceptions_applied'])}" if f["exceptions_applied"] else ""))
 else:
-    st.write("No knowledge-graph rule fired at this warning: the model's warning is explained only by feature contributions below.")
-st.subheader("Contributing factors (exact Tree SHAP)")
-sh = pd.DataFrame(tr.shap)
-if len(sh):
-    st.markdown("**By feature group** (stable across ensemble members)")
-    st.dataframe(sh[sh["level"].str.startswith("group")].drop(columns=["level"]), hide_index=True, use_container_width=True)
-    with st.expander("Individual features (indicative only: unstable ranking across ensemble members)"):
-        st.dataframe(sh[sh["level"].str.startswith("feature")].drop(columns=["level"]), hide_index=True, use_container_width=True)
-else:
-    st.write("Not available (live session: SHAP is computed only in video analysis).")
+    st.write("No knowledge-graph rule fired at this warning.")
 st.subheader("Uncertainty")
 u = tr.uncertainty
 c1, c2, c3 = st.columns(3)
